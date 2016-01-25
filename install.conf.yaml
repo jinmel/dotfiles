@@ -1,0 +1,27 @@
+- clean: ['~']
+
+- shell:
+  -
+    command: [git pull, Update dotfiles]
+    stdout: true
+    stderr: true
+  -
+    command: [git submodule update --init --recursive, Installing submodules]
+    stdout: true
+    stderr: true
+
+- link:
+    ~/.tmux:
+        force: true
+        path: tmux/.tmux
+    ~/.tmux.conf:
+        relink: true
+        path: tmux/.tmux.conf
+    ~/.vim:
+        force: true
+        path: vim/.vim
+    ~/.vimrc:
+        relink: true
+        path: vim/.vimrc
+
+
