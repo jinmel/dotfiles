@@ -25,7 +25,31 @@
         path: vim/.vimrc
     ~/.config/powerline:
         create: true
-        force: true
         path: powerline
+    ~/.config/omf:
+        create: true
+        path: omf
+    ~/.config/fish:
+        create: true
+        path: fish
+
+- shell:
+  - tmux start-server
+  - tmux new-session -d
+  -
+    command: [~/.tmux/plugins/tpm/scripts/install_plugins.sh,Installing tmux plugins]
+    stdout: true
+    stderr: true
+  - tmux kill-server
+  -
+    command: [pip install --user powerline-status,Installing powerline]
+    stdout: true
+    stderr: true
+  -
+    command: [fish -c "omf update;omf theme shellder",Installing omf plugins]
+  -
+    command: [vim +PlugInstall +qall now,Installing vim plugins]
+    stdout: true
+    stderr: true
 
 
