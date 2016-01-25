@@ -34,6 +34,10 @@
         path: fish
 
 - shell:
+  -
+    command: [pip install --user powerline-status]
+    stdout: true
+    stderr: true
   - tmux start-server
   - tmux new-session -d
   -
