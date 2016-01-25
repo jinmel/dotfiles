@@ -23,5 +23,9 @@
     ~/.vimrc:
         relink: true
         path: vim/.vimrc
+    ~/.config/powerline:
+        create: true
+        force: true
+        path: powerline
 
 
