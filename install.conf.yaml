@@ -34,25 +34,30 @@
         path: fish
 
 - shell:
-  -
-    command: [pip install --user powerline-status]
-    stdout: true
-    stderr: true
   - tmux start-server
   - tmux new-session -d
   -
-    command: [~/.tmux/plugins/tpm/scripts/install_plugins.sh,Installing tmux plugins]
+    command: ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+    description: Installing tmux plugins
     stdout: true
     stderr: true
   - tmux kill-server
   -
-    command: [pip install --user powerline-status,Installing powerline]
+    command: pip install --user powerline-status
+    description: Installing powerline
     stdout: true
     stderr: true
   -
-    command: [fish -c "omf update;omf theme shellder",Installing omf plugins]
+    command: ./fonts/install.sh
+    description: Installing powerline fonts
+    stdout: true
+    stderr: true
   -
-    command: [vim +PlugInstall +qall now,Installing vim plugins]
+    command: fish -c "omf update;omf theme shellder"
+    description: Installing omf plugins
+  -
+    command: vim +PlugInstall +qall now
+    description: Installing vim plugins
     stdout: true
     stderr: true
 
