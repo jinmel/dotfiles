@@ -11,7 +11,7 @@ source \~/.vim/key-mapping.vim
     Plug 'bling/vim-airline'
   " }}}
   " CamelCaseMotion {{{
-  Plug 'bkad/CamelCaseMotion'
+    Plug 'bkad/CamelCaseMotion'
   " }}}
   " VCS {{{
     Plug 'tpope/vim-fugitive'
