@@ -1,61 +1,91 @@
-" Plug {{{
-call plug#begin()
-Plug 'scrooloose/nerdtree'
-Plug 'bling/vim-airline'
-Plug 'bkad/CamelCaseMotion'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'kristijanhusak/vim-multiple-cursors'
-Plug 'joom/vim-commentary'
-Plug 'vim-scripts/Align'
-Plug 'valloric/MatchTagAlways'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-Plug 'jiangmiao/auto-pairs'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'wesQ3/vim-windowswap'
-Plug 'tpope/vim-surround'
-Plug 'ervandew/supertab'
-Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'gcmt/wildfire.vim'
-Plug 'Yggdroot/indentLine'
-Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --tern-completer --gocode-completer'}
-Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
-Plug 'junegunn/fzf.vim'
-"Plug 'scrooloose/syntastic'
-Plug 'mhinz/vim-startify'
-
-"Front End
-Plug 'pangloss/vim-javascript'
-Plug 'ap/vim-css-color'
-Plug 'miripiruni/CSScomb-for-Vim'
-Plug 'kchmck/vim-coffee-script'
-
-"Language
-Plug 'klen/python-mode'
-Plug 'derekwyatt/vim-scala'
-Plug 'vim-ruby/vim-ruby'
-Plug 'cypok/vim-sml'
-
-"FrameWork
-Plug 'gre/play2vim'
-Plug 'ensime/ensime-vim' "for scala
-
-"Color Schemes
-Plug 'vim-scripts/wombat256.vim'
-Plug 'altercation/vim-colors-solarized'
-Plug 'flazz/vim-colorschemes'
-Plug 'dfxyz/CandyPaper.vim'
-
-call plug#end()            " required
-" }}}
-
-" Plugin Settings {{{
-let g:windowswap_map_keys = 0 "prevent default bindings
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+" Plugins {{{
+  call plug#begin()
+  " NERDTree {{{
+    Plug 'scrooloose/nerdtree'
+    Plug 'jistr/vim-nerdtree-tabs'
+  " }}}
+  " Airline {{{
+    Plug 'bling/vim-airline'
+  " }}}
+  " CamelCaseMotion {{{
+  Plug 'bkad/CamelCaseMotion'
+  " }}}
+  " VCS {{{
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+  " }}}
+  " Commentary {{{
+    Plug 'joom/vim-commentary'
+  " }}}
+  " Utility Scripts {{{
+    Plug 'vim-scripts/Align'
+    Plug 'vim-scripts/sudo.vim' " e sudo:/etc/passwd
+  " }}}
+  " Snippets {{{
+    Plug 'MarcWeber/vim-addon-mw-utils'
+    Plug 'garbas/vim-snipmate'
+    Plug 'honza/vim-snippets'
+  " }}}
+  " Brackets {{{
+    " vim-surround {{{
+      Plug 'tpope/vim-surround'
+      " 'Hello world!' -> <a>Hello world!</a>
+      " cs'<q>
+      " 'Hello world!' -> Hello world!
+      " ds'
+    " }}}
+    " auto-pairs {{{
+      Plug 'jiangmiao/auto-pairs' " Pairs brackets ex) [ -> []
+    " }}}
+  " }}}
+  " Completion {{{
+    Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --tern-completer --gocode-completer'}
+    Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
+  " }}}
+  " Wildfire {{{
+    Plug 'gcmt/wildfire.vim'
+  " }}}
+  " IndentLine {{{
+    Plug 'Yggdroot/indentLine'
+  " }}}
+  " HTML/CSS {{{
+    Plug 'mattn/emmet-vim', {
+          \  'for': [
+          \    'html','haml','jinja','hbs','html.handlebars','xml','css','less','sass'
+          \  ]
+          \}
+  " }}}
+  " Fuzzy Finder {{{
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+    Plug 'junegunn/fzf.vim'
+  " }}}
+  " Startup Screen {{{
+    Plug 'mhinz/vim-startify'
+  " }}}
+  " Front End {{{
+    Plug 'pangloss/vim-javascript'
+    Plug 'ap/vim-css-color'
+    Plug 'miripiruni/CSScomb-for-Vim'
+    Plug 'kchmck/vim-coffee-script'
+  " }}}
+  " Language {{{
+    Plug 'sheerun/vim-polyglot'
+    Plug 'klen/python-mode'
+    Plug 'derekwyatt/vim-scala'
+    Plug 'vim-ruby/vim-ruby'
+    Plug 'cypok/vim-sml'
+  " }}}
+  " Framework {{{
+    Plug 'gre/play2vim'
+    Plug 'ensime/ensime-vim' "for scala
+  " }}}
+  " Themes {{{
+    Plug 'vim-scripts/wombat256.vim'
+    Plug 'altercation/vim-colors-solarized'
+    Plug 'flazz/vim-colorschemes'
+    Plug 'dfxyz/CandyPaper.vim'
+  " }}}
+  call plug#end()
 " }}}
 
 " YouCompleteMe {{{
@@ -64,17 +94,15 @@ let g:ycm_confirm_extra_conf = 1
 " }}}
 
 " Pymode {{{
-"
 let g:pymode_rope_completion = 0 "disable rope completion
 let g:pymode_lint = 0
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-"
 " }}}
 
 " Airline {{{
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1 "change 0 to 1 if you have a powerline font
+let g:airline_powerline_fonts = 1
 set laststatus=2
 set t_Co=256
 " }}}
@@ -82,14 +110,13 @@ set t_Co=256
 " NERDTree {{{
 let g:NERDTreeMapChangeRoot =  "`"
 
-nmap <Leader>] :NERDTreeTabsToggle<CR>
-nnoremap <Space>c :NERDTreeCWD<CR>
+nnoremap <silent> <F11> :NERDTreeToggle<CR>
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=0
-let NERDTreeQuitOnOpen = 1
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
 let NERDTreeIgnore=['\.pyc$', '\~$']
-let NERDTreeShowLineNumbers = 1
-let NERDTreeWinSize = 25
+let NERDTreeWinSize=25
 
 function! NERDTreeQuit()
   redir => buffersoutput
@@ -116,17 +143,43 @@ endfunction
 autocmd WinEnter * call NERDTreeQuit()
 " }}}
 
+" IndentLine {{{
+let g:indentLine_char='|'
+" }}}
+
+" Emmet (Zen coding) {{{
+let g:user_emmet_mode='i'
+let g:user_emmet_leader_key='<C-Y>'
+let g:user_emmet_settings={
+      \ 'xml': {
+      \   'extends': 'html',
+      \},
+      \ 'haml': {
+      \   'extends': 'html',
+      \},
+      \ 'jinja': {
+      \   'extends': 'html',
+      \},
+      \ 'hbs': {
+      \   'extends': 'html',
+      \},
+      \ 'html.handlebars': {
+      \   'extends': 'html',
+      \},
+    \}
+" }}}
+
 " General {{{
 
 set nocompatible
 filetype off
-set foldmethod=marker
 set linebreak
 
 set number
 
 syntax on
 set mouse=a
+set foldmethod=marker
 set foldlevelstart=1
 
 filetype plugin indent on
@@ -167,25 +220,21 @@ autocmd BufReadPost *
       \ if line("'\"") > 1 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" |
       \ endif
-" Set Vim edit filename on tmux status bar
-" autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter *
-"       \ call system("tmux rename-window 'vim | " . expand("%:t") . "'")
-" autocmd VimLeave * call system("tmux rename-window 'bash'")
 " }}}
 
 " Some Useful Key Mappings {{{
-
-"Split swap
+"Fuzzy finder
 nmap <Tab> :Buffers<CR>
 nmap <C-p> :Files<CR>
-nnoremap <silent> <Leader>sw :call WindowSwap#EasyWindowSwap()<CR>
-nmap <Leader>` :call WindowSwap#EasyWindowSwap()<CR><Leader>[:call WindowSwap#EasyWindowSwap()<CR>
 
 "for unhighlighing the selections
 nmap <Space>x :let @/=''<CR>
 
 "split switch
-nnoremap <Leader>[ <C-W>w
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 "System clipboard
 vmap <Leader>y "+y
@@ -215,15 +264,5 @@ vnoremap < <<CR>gv
 map <Space>w <Plug>CamelCaseMotion_w
 map <Space>b <Plug>CamelCaseMotion_b
 map <Space>e <Plug>CamelCaseMotion_e
-" }}}
-
-" Syntastic{{{
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 " }}}
 
