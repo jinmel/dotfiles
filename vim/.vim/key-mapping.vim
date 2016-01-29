@@ -36,6 +36,8 @@ set pastetoggle=<F5><F5>
 vnoremap > ><CR>gv
 vnoremap < <<CR>gv
 
+nmap <Leader>r :redraw!<CR>
+
 " "Camel case motion (with shift)
 map <Space>w <Plug>CamelCaseMotion_w
 map <Space>b <Plug>CamelCaseMotion_b
