@@ -9,3 +9,4 @@ source $OMF_PATH/init.fish
 
 set -x EDITOR vim
 set PATH ~/.local/bin/ $PATH
+set -x BROWSER firefox
