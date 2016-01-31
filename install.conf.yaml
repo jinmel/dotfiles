@@ -2,11 +2,13 @@
 
 - shell:
   -
-    command: [git pull, Update dotfiles]
+    command: git pull
+    description: Update dotfiles
     stdout: true
     stderr: true
   -
-    command: [git submodule update --init --recursive, Installing submodules]
+    command: git submodule update --init --recursive
+    description: Installing submodules
     stdout: true
     stderr: true
 
@@ -26,6 +28,9 @@
     ~/.gdbinit:
         force: true
         path: gdb/.gdbinit
+    ~/.tools:
+        force: true
+        path: tools
     ~/.config/powerline:
         create: true
         path: powerline
@@ -40,7 +45,7 @@
   - tmux start-server
   - tmux new-session -d
   -
-    command: ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+    command: ./tmux/.tmux/plugins/tpm/scripts/install_plugins.sh
     description: Installing tmux plugins
     stdout: true
     stderr: true
@@ -51,7 +56,7 @@
     stdout: true
     stderr: true
   -
-    command: ./fonts/install.sh
+    command: ./tools/fonts/install.sh
     description: Installing powerline fonts
     stdout: true
     stderr: true

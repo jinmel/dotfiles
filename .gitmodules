@@ -5,7 +5,7 @@
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
 [submodule "fonts"]
-	path = fonts
+	path = tools/fonts
 	url = https://github.com/powerline/fonts.git
 [submodule "gef"]
 	path = tools/gef
