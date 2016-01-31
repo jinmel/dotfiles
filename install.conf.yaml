@@ -31,6 +31,10 @@
     ~/.tools:
         force: true
         path: tools
+    ~/.config/ipython:
+        force: true
+        create: true
+        path: ipython
     ~/.config/powerline:
         create: true
         path: powerline
