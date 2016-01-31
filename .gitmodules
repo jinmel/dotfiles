@@ -8,5 +8,5 @@
 	path = fonts
 	url = https://github.com/powerline/fonts.git
 [submodule "gef"]
-	path = gef
+	path = tools/gef
 	url = https://github.com/hugsy/gef
