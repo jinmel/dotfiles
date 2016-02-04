@@ -65,6 +65,8 @@
     stdout: true
     stderr: true
   -
+    command: curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
+  -
     command: fish -c "omf update;omf theme shellder"
     description: Installing omf plugins
   -
