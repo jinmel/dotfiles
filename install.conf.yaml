@@ -38,9 +38,6 @@
     ~/.config/powerline:
         create: true
         path: powerline
-    ~/.config/omf:
-        create: true
-        path: omf
     ~/.config/fish:
         create: true
         path: fish
@@ -69,5 +66,7 @@
     description: Installing vim plugins
     stdout: true
     stderr: true
-
-
+  -
+    command: curl -sL get.fisherman.sh | fish
+    stdout: true
+    stderr: true
