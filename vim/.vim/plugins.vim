@@ -39,8 +39,9 @@
     " }}}
   " }}}
   " Completion {{{
-    Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --tern-completer --gocode-completer'}
+    Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
     Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
+    Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
   " }}}
   " Wildfire {{{
     Plug 'gcmt/wildfire.vim'
@@ -63,13 +64,14 @@
     Plug 'mhinz/vim-startify'
   " }}}
   " Front End {{{
+    Plug 'sheerun/vim-polyglot'
     Plug 'pangloss/vim-javascript'
+    Plug 'mxw/vim-jsx'
     Plug 'ap/vim-css-color'
     Plug 'miripiruni/CSScomb-for-Vim'
     Plug 'kchmck/vim-coffee-script'
   " }}}
   " Language {{{
-    Plug 'sheerun/vim-polyglot'
     Plug 'klen/python-mode'
     Plug 'derekwyatt/vim-scala'
     Plug 'vim-ruby/vim-ruby'
@@ -81,6 +83,7 @@
     let EnErrorStyle='EnError'
   " }}}
   " Themes {{{
+    Plug 'junegunn/seoul256.vim'
     Plug 'vim-scripts/wombat256.vim'
     Plug 'altercation/vim-colors-solarized'
     Plug 'flazz/vim-colorschemes'
