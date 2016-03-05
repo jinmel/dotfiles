@@ -26,6 +26,9 @@ vmap y ygv<Esc>
 "Reload vimrc
 nmap <F5> :source ~/.vimrc<CR>
 
+"Redraw screen
+nmap <Leader>r :redraw!<CR>
+
 "New Tab
 nmap <Leader>n :tabnew<CR>
 
