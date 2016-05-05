@@ -37,7 +37,6 @@ set noswapfile
 set nobackup
 set number
 set linespace=3
-set autochdir
 set hidden
 set shell=/bin/bash
 

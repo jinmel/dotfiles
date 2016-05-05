@@ -3,6 +3,7 @@
   " NERDTree {{{
     Plug 'scrooloose/nerdtree'
     Plug 'jistr/vim-nerdtree-tabs'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
   " }}}
   " Airline {{{
     Plug 'vim-airline/vim-airline'
@@ -60,7 +61,7 @@
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
     Plug 'junegunn/fzf.vim'
   " }}}
-  " Startup Screen {{{
+  " Utility {{{
     Plug 'mhinz/vim-startify'
   " }}}
   " Front End {{{
@@ -88,6 +89,7 @@
     Plug 'altercation/vim-colors-solarized'
     Plug 'flazz/vim-colorschemes'
     Plug 'dfxyz/CandyPaper.vim'
+    Plug 'ryanoasis/vim-devicons' "Nerd fonts
   " }}}
   call plug#end()
 " }}}
