@@ -40,6 +40,12 @@ set linespace=3
 set hidden
 set shell=/bin/bash
 
+set csprg=/usr/bin/cscope
+set csto=0
+set cst
+set nocsverb
+set csverb
+
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 " Remember last cursor position
