@@ -23,6 +23,7 @@
     Plug 'vim-scripts/Align'
     Plug 'vim-scripts/sudo.vim' " e sudo:/etc/passwd
     Plug 'vim-scripts/taglist.vim'
+    Plug 'sjl/gundo.vim'
   " }}}
   " Snippets {{{
     Plug 'SirVer/ultisnips'
