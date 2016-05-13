@@ -67,6 +67,4 @@
     stdout: true
     stderr: true
   -
-    command: curl -sL get.fisherman.sh | fish
-    stdout: true
-    stderr: true
+    command: curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisherman
