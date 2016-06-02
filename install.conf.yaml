@@ -35,6 +35,14 @@
         force: true
         create: true
         path: ipython
+    ~/.oh-my-zsh:
+        force: true
+        create: true
+        path: zsh/.oh-my-zsh
+    ~/.zshrc:
+        force: true
+        create: true
+        path: zsh/.zshrc
     ~/.config/powerline:
         create: true
         path: powerline
