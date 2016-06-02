@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/crank/.oh-my-zsh
+export ZSH=/home/crank/.oh-my-zsh
+export ZPLUG_HOME=/home/crank/.zplug
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,11 +50,11 @@ ZSH_THEME="dpoggi"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pyenv)
+plugins=(git pyenv history-substring-search npm)
 
 # User configuration
 
-  export PATH="/home/crank/.local/bin/:/home/crank/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/home/crank/.local/bin/:/home/crank/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export EDITOR=vim
@@ -84,3 +85,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Zplug section
+
+source ~/.zplug/init.zsh
+
+zplug "zsh-users/zsh-autosuggestions"
+
+# fzf key binding
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
