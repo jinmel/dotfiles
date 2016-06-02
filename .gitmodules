@@ -10,3 +10,6 @@
 [submodule "gef"]
 	path = tools/gef
 	url = https://github.com/hugsy/gef
+[submodule "oh-my-zsh"]
+	path = zsh/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git

@@ -38,7 +38,7 @@
     ~/.oh-my-zsh:
         force: true
         create: true
-        path: zsh/.oh-my-zsh
+        path: zsh/oh-my-zsh
     ~/.zshrc:
         force: true
         create: true
