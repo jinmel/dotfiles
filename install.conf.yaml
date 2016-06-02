@@ -38,10 +38,6 @@
     ~/.config/powerline:
         create: true
         path: powerline
-    ~/.config/fish:
-        create: true
-        path: fish
-
 - shell:
   - tmux start-server
   - tmux new-session -d
@@ -66,5 +62,3 @@
     description: Installing vim plugins
     stdout: true
     stderr: true
-  -
-    command: curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisherman
