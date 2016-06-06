@@ -31,10 +31,6 @@
     ~/.tools:
         force: true
         path: tools
-    ~/.config/ipython:
-        force: true
-        create: true
-        path: ipython
     ~/.oh-my-zsh:
         force: true
         create: true
