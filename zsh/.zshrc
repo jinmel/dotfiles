@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/crank/.oh-my-zsh
 export ZPLUG_HOME=/home/crank/.zplug
+export ZSH=~/.oh-my-zsh
 
 alias tmux="TERM=screen-256color tmux"
 # Set name of the theme to load.
