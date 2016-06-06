@@ -47,10 +47,7 @@
         force: true
         create: true
         path: zsh/.zshrc
-    ~/.config/powerline:
-        create: true
-        path: powerline
-- shell:
+  - shell:
   - tmux start-server
   - tmux new-session -d
   -
@@ -59,11 +56,6 @@
     stdout: true
     stderr: true
   - tmux kill-server
-  -
-    command: pip install --user powerline-status
-    description: Installing powerline
-    stdout: true
-    stderr: true
   -
     command: ./tools/fonts/install.sh
     description: Installing powerline fonts
