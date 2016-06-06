@@ -58,12 +58,7 @@
     stderr: true
   - tmux kill-server
   -
-    command: ./tools/fonts/install.sh
-    description: Installing powerline fonts
-    stdout: true
-    stderr: true
-  -
     command: vim +PlugInstall +qall now
     description: Installing vim plugins
-    stdout: true
-    stderr: true
+    stdout: false
+    stderr: false

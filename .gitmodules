@@ -4,9 +4,6 @@
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "fonts"]
-	path = tools/fonts
-	url = https://github.com/powerline/fonts.git
 [submodule "gef"]
 	path = tools/gef
 	url = https://github.com/hugsy/gef
