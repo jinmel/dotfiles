@@ -47,7 +47,8 @@
         force: true
         create: true
         path: zsh/.zshrc
-  - shell:
+
+- shell:
   - tmux start-server
   - tmux new-session -d
   -
