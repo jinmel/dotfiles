@@ -2,11 +2,12 @@
 export ZSH=/home/crank/.oh-my-zsh
 export ZPLUG_HOME=/home/crank/.zplug
 
+alias tmux="TERM=screen-256color tmux"
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="dpoggi"
+ZSH_THEME="gianu"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -91,6 +92,8 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zplug/init.zsh
 
 zplug "zsh-users/zsh-autosuggestions"
+
+zplug load
 
 # fzf key binding
 
