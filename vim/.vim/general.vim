@@ -6,8 +6,10 @@ set linebreak
 
 set number
 
+
 syntax on
 set mouse=a
+set backspace=2
 set foldmethod=marker
 set foldlevelstart=1
 
