@@ -3,7 +3,7 @@ source \~/.vim/key-mapping.vim
 source \~/.vim/plugins.vim
 
 " Appearance {{{
-colo CandyPaper
+color dracula
 set background=dark
 " }}}
 

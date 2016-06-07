@@ -91,6 +91,7 @@
     Plug 'altercation/vim-colors-solarized'
     Plug 'flazz/vim-colorschemes'
     Plug 'dfxyz/CandyPaper.vim'
+    Plug 'dracula/vim'
     Plug 'ryanoasis/vim-devicons' "Nerd fonts
   " }}}
   call plug#end()
