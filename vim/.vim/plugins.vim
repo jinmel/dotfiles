@@ -76,6 +76,7 @@
   " }}}
   " Language {{{
     Plug 'klen/python-mode'
+    Plug 'davidhalter/jedi-vim'
     Plug 'derekwyatt/vim-scala'
     Plug 'vim-ruby/vim-ruby'
     Plug 'cypok/vim-sml'
