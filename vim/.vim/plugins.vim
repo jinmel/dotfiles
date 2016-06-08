@@ -62,9 +62,11 @@
   " Fuzzy Finder {{{
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
     Plug 'junegunn/fzf.vim'
+    Plug 'ctrlpvim/ctrlp.vim'
   " }}}
   " Utility {{{
     Plug 'mhinz/vim-startify'
+    Plug 'ervandew/supertab'
   " }}}
   " Front End {{{
     Plug 'sheerun/vim-polyglot'
