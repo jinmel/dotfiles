@@ -9,27 +9,11 @@
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
   " }}}
-  " CamelCaseMotion {{{
+  " Editing {{{
     Plug 'bkad/CamelCaseMotion'
-  " }}}
-  " VCS {{{
-    Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
-  " }}}
-  " Commentary {{{
     Plug 'joom/vim-commentary'
-  " }}}
-  " Utility Scripts {{{
-    Plug 'vim-scripts/Align'
-    Plug 'vim-scripts/sudo.vim' " e sudo:/etc/passwd
-    Plug 'vim-scripts/taglist.vim'
-    Plug 'sjl/gundo.vim'
-  " }}}
-  " Snippets {{{
-    Plug 'SirVer/ultisnips'
-    Plug 'honza/vim-snippets'
-  " }}}
-  " Brackets {{{
+    Plug 'gcmt/wildfire.vim'
+    Plug 'Yggdroot/indentLine'
     " vim-surround {{{
       Plug 'tpope/vim-surround'
       " 'Hello world!' -> <a>Hello world!</a>
@@ -41,18 +25,26 @@
       Plug 'jiangmiao/auto-pairs' " Pairs brackets ex) [ -> []
     " }}}
   " }}}
+  " VCS {{{
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+  " }}}
+  " Utility {{{
+    Plug 'vim-scripts/Align'
+    Plug 'vim-scripts/sudo.vim' " e sudo:/etc/passwd
+    Plug 'vim-scripts/taglist.vim'
+    Plug 'sjl/gundo.vim'
+    Plug 'mhinz/vim-startify'
+    Plug 'ervandew/supertab'
+  " }}}
+  " Snippets {{{
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+  " }}}
   " Completion {{{
     Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
     Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
     Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
-  " }}}
-  " Wildfire {{{
-    Plug 'gcmt/wildfire.vim'
-  " }}}
-  " IndentLine {{{
-    Plug 'Yggdroot/indentLine'
-  " }}}
-  " HTML/CSS {{{
     Plug 'mattn/emmet-vim', {
           \  'for': [
           \    'html','haml','jinja','hbs','html.handlebars','xml','css','less','sass'
@@ -64,29 +56,28 @@
     Plug 'junegunn/fzf.vim'
     Plug 'ctrlpvim/ctrlp.vim'
   " }}}
-  " Utility {{{
-    Plug 'mhinz/vim-startify'
-    Plug 'ervandew/supertab'
-  " }}}
-  " Front End {{{
-    Plug 'sheerun/vim-polyglot'
-    Plug 'pangloss/vim-javascript'
-    Plug 'mxw/vim-jsx'
-    Plug 'ap/vim-css-color'
-    Plug 'miripiruni/CSScomb-for-Vim'
-    Plug 'kchmck/vim-coffee-script'
-  " }}}
   " Language {{{
-    Plug 'klen/python-mode'
-    Plug 'davidhalter/jedi-vim'
-    Plug 'derekwyatt/vim-scala'
-    Plug 'vim-ruby/vim-ruby'
-    Plug 'cypok/vim-sml'
-  " }}}
-  " Framework {{{
-    Plug 'gre/play2vim'
-    Plug 'ensime/ensime-vim' "for scala
-    let EnErrorStyle='EnError'
+    " Html CSS Javascript {{{
+      Plug 'pangloss/vim-javascript'
+      Plug 'mxw/vim-jsx'
+      Plug 'ap/vim-css-color'
+      Plug 'miripiruni/CSScomb-for-Vim'
+      Plug 'kchmck/vim-coffee-script'
+    " }}}
+    " Python {{{
+      Plug 'klen/python-mode'
+      Plug 'davidhalter/jedi-vim'
+    " }}}
+    " Scala {{{
+      Plug 'derekwyatt/vim-scala'
+      Plug 'gre/play2vim'
+      Plug 'ensime/ensime-vim' "for scala
+    " }}}
+    " Other {{{
+      Plug 'sheerun/vim-polyglot'
+      Plug 'vim-ruby/vim-ruby'
+      Plug 'cypok/vim-sml'
+    " }}}
   " }}}
   " Themes {{{
     Plug 'junegunn/seoul256.vim'
@@ -94,10 +85,8 @@
     Plug 'altercation/vim-colors-solarized'
     Plug 'flazz/vim-colorschemes'
     Plug 'dfxyz/CandyPaper.vim'
-    Plug 'dracula/vim'
+    Plug 'dracula/vim' "dracula theme
     Plug 'ryanoasis/vim-devicons' "Nerd fonts
   " }}}
   call plug#end()
 " }}}
-
-

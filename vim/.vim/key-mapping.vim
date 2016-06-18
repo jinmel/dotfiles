@@ -1,8 +1,4 @@
 " Some Useful Key Mappings {{{
-"Fuzzy finder
-nmap <Tab> :Buffers<CR>
-nmap <C-p> :Files<CR>
-
 "for unhighlighing the selections
 nmap <Space>x :let @/=''<CR>
 
