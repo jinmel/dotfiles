@@ -22,9 +22,6 @@
     ~/.vim:
         force: true
         path: vim/.vim
-    ~/.vimrc:
-        force: true
-        path: vim/.vimrc
     ~/.gdbinit:
         force: true
         path: gdb/.gdbinit
