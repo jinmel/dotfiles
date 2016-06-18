@@ -43,6 +43,10 @@
         force: true
         create: true
         path: zsh/.zshrc
+    ~/.Xresources:
+        force: true
+        create: true
+        path: X/.Xresources
 
 - shell:
   - tmux start-server
