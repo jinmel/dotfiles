@@ -59,6 +59,7 @@ export PATH="~/.local/bin/:~/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export EDITOR=vim
+export DISABLE_AUTO_TITLE=true
 
 source $ZSH/oh-my-zsh.sh
 
