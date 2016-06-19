@@ -3,6 +3,7 @@
   " let g:ycm_extra_conf_globlist = ['~/dev/*','!~/*']
 " }}}
 " Pymode {{{
+  let g:pymode_rope = 0
   let g:pymode_rope_completion = 0 "disable rope completion
   let g:pymode_lint = 0
   autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
