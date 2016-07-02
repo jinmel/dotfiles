@@ -61,6 +61,9 @@ export PATH="~/.local/bin/:~/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 export EDITOR=vim
 export DISABLE_AUTO_TITLE=true
 
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
