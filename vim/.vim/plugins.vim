@@ -65,7 +65,7 @@
       Plug 'kchmck/vim-coffee-script'
     " }}}
     " Python {{{
-      Plug 'klen/python-mode'
+      " Plug 'klen/python-mode'
       Plug 'davidhalter/jedi-vim'
     " }}}
     " Scala {{{
