@@ -24,6 +24,7 @@
     " auto-pairs {{{
       Plug 'jiangmiao/auto-pairs' " Pairs brackets ex) [ -> []
     " }}}
+    Plug 'tpope/vim-repeat'
   " }}}
   " VCS {{{
     Plug 'tpope/vim-fugitive'
