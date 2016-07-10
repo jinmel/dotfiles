@@ -44,6 +44,10 @@
         force: true
         create: true
         path: X/.Xresources
+    ~/.gitconfig:
+        force: true
+        create: true
+        path: git/.gitconfig
 
 - shell:
   - tmux start-server

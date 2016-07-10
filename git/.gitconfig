@@ -1,0 +1,7 @@
+[user]
+	email = totorovirus@gmail.com
+  name = Jin Suk Park
+[push]
+	default = simple
+[credential]
+	helper = cache
