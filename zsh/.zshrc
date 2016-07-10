@@ -55,7 +55,7 @@ plugins=(git pyenv history-substring-search npm)
 
 # User configuration
 
-export PATH="~/.local/bin/:~/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="~/.local/bin:~/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export EDITOR=vim
