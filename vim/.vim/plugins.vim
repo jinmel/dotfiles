@@ -68,6 +68,7 @@
     " Python {{{
       " Plug 'klen/python-mode'
       Plug 'davidhalter/jedi-vim'
+      Plug 'hdima/python-syntax'
     " }}}
     " Scala {{{
       Plug 'derekwyatt/vim-scala'
