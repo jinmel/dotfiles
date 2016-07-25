@@ -50,14 +50,11 @@
         path: git/.gitconfig
 
 - shell:
-  - tmux start-server
-  - tmux new-session -d
   -
     command: ./tmux/.tmux/plugins/tpm/scripts/install_plugins.sh
     description: Installing tmux plugins
     stdout: true
     stderr: true
-  - tmux kill-server
   -
     command: vim +PlugInstall +qall
     description: Installing vim plugins
