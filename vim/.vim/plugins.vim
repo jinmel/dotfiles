@@ -39,8 +39,7 @@
   " }}}
   " Completion {{{
     Plug 'ervandew/supertab'
-    Plug 'SirVer/ultisnips'
-    Plug 'honza/vim-snippets'
+    Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
     Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
     Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
