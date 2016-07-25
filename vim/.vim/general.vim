@@ -9,7 +9,6 @@ set backspace=2
 set foldmethod=marker
 set foldlevelstart=1
 
-filetype off
 filetype plugin indent on
 
 set encoding=utf-8
@@ -43,10 +42,6 @@ set csto=0
 set cst
 set nocsverb
 set csverb
-
-" Appearance
-color dracula
-set background=dark
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
