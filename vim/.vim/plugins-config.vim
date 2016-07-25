@@ -56,6 +56,22 @@
         \},
       \}
 " }}}
+" Completion {{{
+" make YCM compatible with UltiSnips (using supertab)
+  let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+  let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+  let g:SuperTabDefaultCompletionType = '<C-n>'
+
+ " better key bindings for UltiSnipsExpandTrigger
+  let g:UltiSnipsExpandTrigger = "<tab>"
+  let g:UltiSnipsJumpForwardTrigger = "<tab>"
+  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" }}}
+
+" CtrlP {{{
+ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+ let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
+" }}}
 
 " Polyglot {{{
   let g:polyglot_disabled = ['javascript.jsx', 'javascript', 'css', 'scala', 'sml', 'ruby']

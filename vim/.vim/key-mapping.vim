@@ -20,16 +20,16 @@ vmap <Leader>P "+P
 vmap y ygv<Esc>
 
 "Reload vimrc
-nmap <F5> :source ~/.vimrc<CR>
+nmap <F5> :GundoToggle<CR>
 
 "Redraw screen
 nmap <Leader>r :redraw!<CR>
 
 "New Tab
-nmap <Leader>n :tabnew<CR>
+nmap <Leader>t :tabnew<CR>
 
-"Paste mode toggle
-set pastetoggle=<F5><F5>
+"Open buffer
+nmap <tab> :Buffer<CR>
 
 "Keep selection after indent
 vnoremap > ><CR>gv
