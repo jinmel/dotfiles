@@ -97,7 +97,7 @@ source ~/.zplug/init.zsh
 
 zplug "zsh-users/zsh-autosuggestions"
 
-zplug load
+zplug load --verbose
 
 # fzf key binding
 
