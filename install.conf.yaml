@@ -65,3 +65,8 @@
     description: Installing vim plugins
     stdout: false
     stderr: false
+  -
+    command: ruby ./tools/linuxbrew/install.rb
+    description: Installing linuxbrew
+    stdout: true
+    stdout: true
