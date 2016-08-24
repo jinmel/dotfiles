@@ -25,6 +25,7 @@
       Plug 'jiangmiao/auto-pairs' " Pairs brackets ex) [ -> []
     " }}}
     Plug 'tpope/vim-repeat'
+    Plug 'tpope/vim-abolish' "abbreviation utility
   " }}}
   " VCS {{{
     Plug 'tpope/vim-fugitive'
