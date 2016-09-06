@@ -19,8 +19,8 @@ vmap <Leader>P "+P
 "Keep the cursor in the same place after yank
 vmap y ygv<Esc>
 
-"Reload vimrc
 nmap <F5> :GundoToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
 "Redraw screen
 nmap <Leader>r :redraw!<CR>

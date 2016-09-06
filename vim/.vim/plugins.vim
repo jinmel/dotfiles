@@ -37,6 +37,7 @@
     Plug 'vim-scripts/taglist.vim'
     Plug 'sjl/gundo.vim'
     Plug 'mhinz/vim-startify'
+    Plug 'majutsushi/tagbar'
   " }}}
   " Completion {{{
     Plug 'ervandew/supertab'
