@@ -1,7 +1,7 @@
 [user]
-	email = totorovirus@gmail.com
-  name = Jin Suk Park
+    email = totorovirus@gmail.com
+    name = Jin Suk Park
 [push]
-	default = simple
+    default = simple
 [credential]
-	helper = cache
+    helper = cache
