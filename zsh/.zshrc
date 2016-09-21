@@ -54,8 +54,9 @@ ZSH_THEME="dpoggi"
 plugins=(git pyenv npm nvm)
 
 # User configuration
+GOPATH=$HOME/gocode
 
-export PATH="~/.local/bin:~/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$GOPATH/bin:$HOME/.local/bin:$HOME/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export EDITOR=vim
@@ -109,3 +110,4 @@ export NVM_DIR="/home/crank/.nvm"
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+export GOPATH
