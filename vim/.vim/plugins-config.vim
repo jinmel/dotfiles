@@ -19,7 +19,6 @@
   let g:NERDTreeMapChangeRoot =  "`"
   let g:WebDevIconsNerdTreeGitPluginForceVAlign=1
 
-  nnoremap <silent> <F11> :NERDTreeToggle<CR>
   let NERDTreeMinimalUI=1
   let NERDTreeDirArrows=1
   let NERDTreeShowHidden=1

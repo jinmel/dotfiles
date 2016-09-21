@@ -21,6 +21,7 @@ vmap y ygv<Esc>
 
 nmap <F5> :GundoToggle<CR>
 nmap <F8> :TagbarToggle<CR>
+nnoremap <silent> <F11> :NERDTreeTabsToggle<CR>
 
 "Redraw screen
 nmap <Leader>r :redraw!<CR>
