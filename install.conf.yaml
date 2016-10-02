@@ -48,6 +48,11 @@
         force: true
         create: true
         path: git/.gitconfig
+    ~/.nvm:
+        force: true
+        create: true
+        path: tools/nvm
+
 
 - shell:
   -
@@ -56,17 +61,17 @@
     stdout: true
     stderr: true
   -
-    command: ./tools/fzf/install
+    command: yes | ./tools/fzf/install
     description: Installing fzf
     stdout: true
-    stderr: true
+    stderr: false
   -
     command: vim +PlugInstall +qall
     description: Installing vim plugins
-    stdout: false
+    stdout: true
     stderr: false
   -
     command: ruby ./tools/linuxbrew/install.rb
     description: Installing linuxbrew
     stdout: true
-    stdout: true
+    stderr: true

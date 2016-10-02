@@ -52,7 +52,7 @@
           \}
   " }}}
   " Fuzzy Finder {{{
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
     Plug 'junegunn/fzf.vim'
     Plug 'ctrlpvim/ctrlp.vim'
   " }}}
