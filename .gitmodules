@@ -19,3 +19,9 @@
 [submodule "tools/nvm"]
 	path = tools/nvm
 	url = https://github.com/creationix/nvm.git
+[submodule "tools/pyenv"]
+	path = tools/pyenv
+	url = https://github.com/yyuu/pyenv.git
+[submodule "tools/pyenv-virtualenv"]
+	path = tools/pyenv-virtualenv
+	url = https://github.com/yyuu/pyenv-virtualenv.git

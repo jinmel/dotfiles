@@ -52,6 +52,14 @@
         force: true
         create: true
         path: tools/nvm
+    ~/.pyenv:
+        force : true
+        create: true
+        path: tools/pyenv
+    ~/.pyenv/plugins/pyenv-virtualenv:
+        force: true
+        create: true
+        path: tools/pyenv-virtualenv
 
 
 - shell:
