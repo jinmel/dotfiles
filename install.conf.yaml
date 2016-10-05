@@ -73,7 +73,7 @@
     command: vim +PlugInstall +qall
     description: Installing vim plugins
     stdout: true
-    stderr: false
+    stderr: true
   -
     command: ruby ./tools/linuxbrew/install.rb
     description: Installing linuxbrew
