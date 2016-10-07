@@ -2,7 +2,7 @@
     email = totorovirus@gmail.com
     name = Jin Suk Park
 [push]
-    default = simple
+	default = matching
 [credential]
     helper = cache
 [filter "lfs"]

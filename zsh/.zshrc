@@ -92,14 +92,6 @@ export LANGUAGE=en_US.UTF-8
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Zplug section
-
-source ~/.zplug/init.zsh
-
-zplug "zsh-users/zsh-autosuggestions"
-
-zplug load
-
 # fzf key binding
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

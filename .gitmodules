@@ -10,9 +10,6 @@
 [submodule "oh-my-zsh"]
 	path = zsh/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "zsh/zplug"]
-	path = zsh/zplug
-	url = https://github.com/zplug/zplug
 [submodule "tools/fzf"]
 	path = tools/fzf
 	url = https://github.com/junegunn/fzf
