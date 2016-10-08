@@ -32,10 +32,6 @@
         force: true
         create: true
         path: zsh/oh-my-zsh
-    ~/.zplug:
-        force: true
-        create: true
-        path: zsh/zplug
     ~/.zshrc:
         force: true
         create: true
