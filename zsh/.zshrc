@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
-export ZPLUG_HOME=~/.zplug
 export ZSH=~/.oh-my-zsh
+export ZSH_PLUGINS=$HOME/.zsh-plugins
 
 alias tmux="TERM=screen-256color tmux"
 # Set name of the theme to load.
@@ -95,6 +95,10 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 # fzf key binding
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zsh autosuggestion
+
+source $ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # linuxbrew
 
