@@ -72,6 +72,11 @@
  let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
 " }}}
 
+" Tagbar {{{
+ let g:tagbar_compact = 1
+ let g:tagbar_width = 30
+" }}}
+
 " Polyglot {{{
   let g:polyglot_disabled = ['javascript.jsx', 'javascript', 'css', 'scala', 'sml', 'ruby']
 " }}}
