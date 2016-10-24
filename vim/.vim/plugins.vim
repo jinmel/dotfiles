@@ -34,7 +34,7 @@
   " Utility {{{
     Plug 'vim-scripts/Align'
     Plug 'vim-scripts/sudo.vim' " e sudo:/etc/passwd
-    Plug 'vim-scripts/taglist.vim'
+    Plug 'godlygeek/tabular'
     Plug 'sjl/gundo.vim'
     Plug 'mhinz/vim-startify'
     Plug 'majutsushi/tagbar'
