@@ -4,8 +4,8 @@
 2. tmux
 3. zsh
 4. X (mostly urxvt colors)
-5. Powerline Nerd Fonts
-6. gdb with gef
+5. gdb with gef
+6. Linuxbrew
 
 ## Installation
 
