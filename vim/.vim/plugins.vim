@@ -38,6 +38,7 @@
     Plug 'sjl/gundo.vim'
     Plug 'mhinz/vim-startify'
     Plug 'majutsushi/tagbar'
+    Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
   " }}}
   " Completion {{{
     Plug 'ervandew/supertab'
