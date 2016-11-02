@@ -1,9 +1,6 @@
 [submodule "dotbot"]
 	path = tools/dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "tmux/.tmux/plugins/tpm"]
-	path = tmux/.tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
 [submodule "gef"]
 	path = tools/gef
 	url = https://github.com/hugsy/gef

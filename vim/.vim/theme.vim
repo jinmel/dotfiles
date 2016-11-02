@@ -1,4 +1,4 @@
-color dracula
+color CandyPaper
 set background=dark
 
 

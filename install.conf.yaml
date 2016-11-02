@@ -13,9 +13,6 @@
     stderr: true
 
 - link:
-    ~/.tmux:
-        force: true
-        path: tmux/.tmux
     ~/.tmux.conf:
         relink: true
         path: tmux/.tmux.conf
