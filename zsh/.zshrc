@@ -92,6 +92,45 @@ export LANGUAGE=en_US.UTF-8
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
+case "$TERM" in
+    screen*)
+        local a=${(V)1//\%/\%\%}
+        precmd() {
+            print -Pn '\033k$a %~\033\\';
+        }
+        ;;
+esac
+
+function title() {
+    # escape '%' chars in $1, make nonprintables visible
+    local a=${(V)1//\%/\%\%}
+
+    # Truncate command, and join lines.
+    a=$(print -Pn "%20>...>$a" | tr -d "\n")
+    local prompt=$a@$2
+    case $TERM in
+        screen*)
+            print -Pn "\e]2;$prompt\a" # plain xterm title
+            print -Pn "\033k$prompt\033\\" # tmux window title
+            ;;
+        xterm*)
+            print -Pn "\e]2;$prompt\a" # plain xterm title
+            ;;
+    esac
+
+}
+
+# precmd is called just before the prompt is printed
+function precmd() {
+    title "zsh" "%m:%55<...<%~"
+}
+
+# preexec is called just before any command line is executed
+function preexec() {
+    title "$1" "%m:%35<...<%~"
+}
+
+
 # fzf key binding
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
