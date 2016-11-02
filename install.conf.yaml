@@ -61,11 +61,6 @@
 
 - shell:
   -
-    command: ./tmux/.tmux/plugins/tpm/scripts/install_plugins.sh
-    description: Installing tmux plugins
-    stdout: true
-    stderr: true
-  -
     command: yes | ./tools/fzf/install
     description: Installing fzf
     stdout: true
