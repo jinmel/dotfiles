@@ -45,7 +45,8 @@
     Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
     Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
-    Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
+    Plug 'ternjs/tern_for_vim', {'do': 'npm install', 'for': ['javascript', 'javascript.jsx']}
+    Plug 'othree/jspc.vim', {'for': ['javascript', 'javascript.jsx']}
     Plug 'mattn/emmet-vim', {
           \  'for': [
           \    'html','haml','jinja','hbs','html.handlebars','xml','css','less','sass'
