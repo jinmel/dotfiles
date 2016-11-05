@@ -63,22 +63,13 @@
       Plug 'mxw/vim-jsx'
       Plug 'ap/vim-css-color'
       Plug 'miripiruni/CSScomb-for-Vim'
-      Plug 'kchmck/vim-coffee-script'
     " }}}
     " Python {{{
-      " Plug 'klen/python-mode'
       Plug 'davidhalter/jedi-vim'
       Plug 'hdima/python-syntax'
     " }}}
-    " Scala {{{
-      Plug 'derekwyatt/vim-scala'
-      Plug 'gre/play2vim'
-      Plug 'ensime/ensime-vim' "for scala
-    " }}}
     " Other {{{
       Plug 'sheerun/vim-polyglot'
-      Plug 'vim-ruby/vim-ruby'
-      Plug 'cypok/vim-sml'
     " }}}
   " }}}
   " Themes {{{

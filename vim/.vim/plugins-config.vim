@@ -65,16 +65,18 @@
   let g:UltiSnipsExpandTrigger = "<tab>"
   let g:UltiSnipsJumpForwardTrigger = "<tab>"
   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+  let g:jedi#completions_command = "<tab>"
 " }}}
 
 " CtrlP {{{
- let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
- let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+  let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
 " }}}
 
 " Tagbar {{{
- let g:tagbar_compact = 1
- let g:tagbar_width = 30
+  let g:tagbar_compact = 1
+  let g:tagbar_width = 30
 " }}}
 
 " Polyglot {{{
