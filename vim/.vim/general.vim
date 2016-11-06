@@ -1,5 +1,3 @@
-" General {{{
-
 set nocompatible
 set linebreak
 set number

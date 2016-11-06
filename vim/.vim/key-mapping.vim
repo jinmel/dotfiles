@@ -29,8 +29,10 @@ nmap <Leader>r :redraw!<CR>
 "New Tab
 nmap <Leader>t :tabnew<CR>
 
-"Open buffer
+"fzf.vim
 nmap <tab> :Buffer<CR>
+nmap <C-p> :GFiles<CR>
+nmap <C-o> :Tags<CR>
 
 "Keep selection after indent
 vnoremap > ><CR>gv

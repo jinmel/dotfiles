@@ -42,8 +42,8 @@
   " }}}
   " Completion {{{
     Plug 'ervandew/supertab'
-    Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
+    Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
     Plug 'ternjs/tern_for_vim', {'do': 'npm install', 'for': ['javascript', 'javascript.jsx']}
     Plug 'othree/jspc.vim', {'for': ['javascript', 'javascript.jsx']}
@@ -56,7 +56,6 @@
   " Fuzzy Finder {{{
     Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
     Plug 'junegunn/fzf.vim'
-    Plug 'ctrlpvim/ctrlp.vim'
   " }}}
   " Language {{{
     " Html CSS Javascript {{{
@@ -74,12 +73,8 @@
     " }}}
   " }}}
   " Themes {{{
-    Plug 'junegunn/seoul256.vim'
-    Plug 'vim-scripts/wombat256.vim'
-    Plug 'altercation/vim-colors-solarized'
     Plug 'flazz/vim-colorschemes'
     Plug 'dfxyz/CandyPaper.vim'
-    Plug 'dracula/vim' "dracula theme
     Plug 'ryanoasis/vim-devicons' "Nerd fonts
   " }}}
   call plug#end()
