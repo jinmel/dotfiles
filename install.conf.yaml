@@ -66,11 +66,6 @@
     stdout: true
     stderr: false
   -
-    command: vim +PlugInstall +qall
-    description: Installing vim plugins
-    stdout: true
-    stderr: true
-  -
     command: ruby ./tools/linuxbrew/install.rb
     description: Installing linuxbrew
     stdout: true
