@@ -1,6 +1,9 @@
 " YouCompleteMe {{{
-  let g:ycm_confirm_extra_conf = 1
+  let g:ycm_confirm_extra_conf = 0
   " let g:ycm_extra_conf_globlist = ['~/dev/*','!~/*']
+" }}}
+" CSS Comb {{{
+  autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 " }}}
 " Pymode {{{
   let g:pymode_rope = 0
@@ -25,10 +28,6 @@
   let NERDTreeQuitOnOpen=0
   let NERDTreeIgnore=['\.pyc$', '\~$']
   let NERDTreeWinSize=30
-" }}}
-
-" IndentLine {{{
-"let g:indentLine_char='|'
 " }}}
 
 " Emmet (Zen coding) {{{
@@ -65,12 +64,6 @@
   let g:UltiSnipsExpandTrigger = "<tab>"
   let g:UltiSnipsJumpForwardTrigger = "<tab>"
   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-" }}}
-
-" CtrlP {{{
-  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-  let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
-  let g:ctrlp_working_path_mode = 'ra'
 " }}}
 
 " Tagbar {{{

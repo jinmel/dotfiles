@@ -32,7 +32,7 @@ nmap <Leader>t :tabnew<CR>
 "fzf.vim
 nmap <tab> :Buffer<CR>
 nmap <C-p> :GFiles<CR>
-nmap <C-o> :Tags<CR>
+nmap <s-tab> :Tags<CR>
 
 "Keep selection after indent
 vnoremap > ><CR>gv
