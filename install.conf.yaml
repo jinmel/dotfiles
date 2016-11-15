@@ -19,6 +19,9 @@
     ~/.vim:
         force: true
         path: vim/.vim
+    ~/.config/nvim:
+        force: true
+        path: vim/.vim
     ~/.gdbinit:
         force: true
         path: gdb/.gdbinit
