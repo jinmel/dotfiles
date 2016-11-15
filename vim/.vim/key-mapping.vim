@@ -31,7 +31,8 @@ nmap <Leader>t :tabnew<CR>
 
 "fzf.vim
 nmap <tab> :Buffer<CR>
-nmap <C-p> :GFiles<CR>
+nmap <C-p> :Files<CR>
+nmap g<C-p> :GitFiles<CR>
 nmap <s-tab> :Tags<CR>
 
 "Keep selection after indent
