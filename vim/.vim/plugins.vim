@@ -12,6 +12,7 @@
   " Editing {{{
     Plug 'bkad/CamelCaseMotion'
     Plug 'joom/vim-commentary'
+    Plug 'rhysd/vim-clang-format'
     Plug 'gcmt/wildfire.vim'
     Plug 'Yggdroot/indentLine'
     " vim-surround {{{

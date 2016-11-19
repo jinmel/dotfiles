@@ -66,6 +66,11 @@
   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " }}}
 
+" vim-clang-format {{{
+  let g:clang_format#style = "llvm"
+  let g:clang_format#detect_style_file = 1
+" }}}
+
 " Tagbar {{{
   let g:tagbar_compact = 1
   let g:tagbar_width = 30

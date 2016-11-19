@@ -35,6 +35,10 @@ nmap <C-p> :Files<CR>
 nmap g<C-p> :GitFiles<CR>
 nmap <s-tab> :Tags<CR>
 
+"clang-format
+nnoremap gf :ClangFormat<CR>
+vnoremap gf :ClangFormat<CR>
+
 "Keep selection after indent
 vnoremap > ><CR>gv
 vnoremap < <<CR>gv
