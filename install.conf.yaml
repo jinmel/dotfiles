@@ -68,8 +68,4 @@
     description: Installing fzf
     stdout: true
     stderr: false
-  -
-    command: ruby ./tools/linuxbrew/install.rb
-    description: Installing linuxbrew
-    stdout: true
-    stderr: true
+
