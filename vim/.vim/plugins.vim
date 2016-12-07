@@ -13,7 +13,6 @@
     Plug 'bkad/CamelCaseMotion'
     Plug 'joom/vim-commentary'
     Plug 'rhysd/vim-clang-format'
-    Plug 'gcmt/wildfire.vim'
     Plug 'Yggdroot/indentLine'
     " vim-surround {{{
       Plug 'tpope/vim-surround'
@@ -33,7 +32,7 @@
     Plug 'airblade/vim-gitgutter'
   " }}}
   " Utility {{{
-    Plug 'vim-scripts/Align'
+    Plug 'junegunn/vim-easy-align'
     Plug 'vim-scripts/sudo.vim' " e sudo:/etc/passwd
     Plug 'godlygeek/tabular'
     Plug 'sjl/gundo.vim'
