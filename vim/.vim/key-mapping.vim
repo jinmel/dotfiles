@@ -1,4 +1,7 @@
 " Some Useful Key Mappings {{{
+
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
+
 "for unhighlighing the selections
 nmap <Space>x :let @/=''<CR>
 
