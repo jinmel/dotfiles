@@ -2,6 +2,7 @@
 export ZSH=~/.oh-my-zsh
 export ZSH_PLUGINS=$HOME/.zsh-plugins
 
+# Aliases
 alias tmux="TERM=screen-256color tmux"
 alias vim="nvim"
 # Set name of the theme to load.
