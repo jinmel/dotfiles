@@ -1,3 +1,7 @@
+- defaults:
+    link:
+      relink: true
+
 - clean: ['~']
 
 - shell:
@@ -60,12 +64,3 @@
         force: true
         create: true
         path: tools/pyenv-virtualenv
-
-
-- shell:
-  -
-    command: yes | ./tools/fzf/install
-    description: Installing fzf
-    stdout: true
-    stderr: false
-
