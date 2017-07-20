@@ -55,15 +55,13 @@
       \}
 " }}}
 " Completion {{{
-" make YCM compatible with UltiSnips (using supertab)
-  let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-  let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-  let g:SuperTabDefaultCompletionType = '<C-n>'
+  let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'jedi')
+  let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'mistune')
 
- " better key bindings for UltiSnipsExpandTrigger
-  let g:UltiSnipsExpandTrigger = "<tab>"
-  let g:UltiSnipsJumpForwardTrigger = "<tab>"
-  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" utils, optional
+  let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'psutil')
+  let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'setproctitle')"
+  let g:python_support_python2_require=0
 " }}}
 
 " vim-clang-format {{{

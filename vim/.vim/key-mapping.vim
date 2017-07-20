@@ -22,7 +22,7 @@ vmap <Leader>P "+P
 "Keep the cursor in the same place after yank
 vmap y ygv<Esc>
 
-nmap <F5> :GundoToggle<CR>
+nmap <F5> :MundoToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap <silent> <F11> :NERDTreeTabsToggle<CR>
 
@@ -45,6 +45,9 @@ vnoremap gf :ClangFormat<CR>
 "Keep selection after indent
 vnoremap > ><CR>gv
 vnoremap < <<CR>gv
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " "Camel case motion (with shift)
 map <Space>w <Plug>CamelCaseMotion_w

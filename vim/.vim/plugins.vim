@@ -35,18 +35,16 @@
     Plug 'junegunn/vim-easy-align'
     Plug 'vim-scripts/sudo.vim' " e sudo:/etc/passwd
     Plug 'godlygeek/tabular'
-    Plug 'sjl/gundo.vim'
+    Plug 'simnalamburt/vim-mundo'
     Plug 'mhinz/vim-startify'
     Plug 'majutsushi/tagbar'
     Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
   " }}}
   " Completion {{{
-    Plug 'ervandew/supertab'
-    Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
-    Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-    Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
-    Plug 'ternjs/tern_for_vim', {'do': 'npm install', 'for': ['javascript', 'javascript.jsx']}
-    Plug 'othree/jspc.vim', {'for': ['javascript', 'javascript.jsx']}
+    Plug 'roxma/nvim-completion-manager'
+    Plug 'roxma/python-support.nvim'
+    Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
+    Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
     Plug 'mattn/emmet-vim', {
           \  'for': [
           \    'html','haml','jinja','hbs','html.handlebars','xml','css','less','sass'
@@ -65,7 +63,6 @@
       Plug 'miripiruni/CSScomb-for-Vim'
     " }}}
     " Python {{{
-      Plug 'davidhalter/jedi-vim'
       Plug 'hdima/python-syntax'
     " }}}
     " Other {{{
