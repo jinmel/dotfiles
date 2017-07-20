@@ -3,6 +3,7 @@ export ZSH=~/.oh-my-zsh
 export ZSH_PLUGINS=$HOME/.zsh-plugins
 
 alias tmux="TERM=screen-256color tmux"
+alias vim="nvim"
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -57,7 +58,7 @@ plugins=(git pyenv nvm brew docker vagrant)
 export GOPATH=$HOME/gocode
 export PATH="$GOPATH/bin:$HOME/.local/bin:$HOME/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # Enable oh my zsh
 source $ZSH/oh-my-zsh.sh
