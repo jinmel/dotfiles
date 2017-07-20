@@ -64,3 +64,12 @@
         force: true
         create: true
         path: tools/pyenv-virtualenv
+
+- tap:
+  - neovim/neovim
+
+- brew:
+  - zsh
+  - neovim
+  - tmux
+
