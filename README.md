@@ -9,8 +9,10 @@
 
 ## Installation
 
+
 ```shell
 git pull https://github.com/jinmel/dotfiles.git
 cd dotfiles
+./preinstall
 ./install
 ```
