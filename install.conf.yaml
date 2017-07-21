@@ -25,6 +25,7 @@
         path: vim/.vim
     ~/.config/nvim:
         force: true
+        create: true
         path: vim/.vim
     ~/.gdbinit:
         force: true
