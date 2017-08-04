@@ -9,6 +9,7 @@
   let g:pymode_rope = 0
   let g:pymode_rope_completion = 0 "disable rope completion
   let g:pymode_lint = 0
+  let g:python_highlight_all = 1
   autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
   autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " }}}
@@ -54,15 +55,6 @@
         \},
       \}
 " }}}
-" Completion {{{
-  let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'jedi')
-  let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'mistune')
-
-" utils, optional
-  let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'psutil')
-  let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'setproctitle')"
-  let g:python_support_python2_require=0
-" }}}
 
 " vim-clang-format {{{
   let g:clang_format#style = "llvm"
@@ -72,6 +64,18 @@
 " Tagbar {{{
   let g:tagbar_compact = 1
   let g:tagbar_width = 30
+" }}}
+
+" Syntastic {{{
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+
+  let b:syntastic_mode = "passive"
+  let g:syntastic_always_populate_loc_list = 0
+  let g:syntastic_auto_loc_list = 0
+  let g:syntastic_check_on_open = 0
+  let g:syntastic_check_on_wq = 0
 " }}}
 
 " Polyglot {{{

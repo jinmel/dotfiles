@@ -42,7 +42,6 @@
   " }}}
   " Completion {{{
     Plug 'roxma/nvim-completion-manager'
-    Plug 'roxma/python-support.nvim'
     Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
     Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
     Plug 'mattn/emmet-vim', {
@@ -64,6 +63,7 @@
     " }}}
     " Python {{{
       Plug 'hdima/python-syntax'
+      Plug 'vim-syntastic/syntastic'
     " }}}
     " Other {{{
       Plug 'sheerun/vim-polyglot'
@@ -71,6 +71,7 @@
   " }}}
   " Themes {{{
     Plug 'flazz/vim-colorschemes'
+    Plug 'altercation/vim-colors-solarized'
     Plug 'dfxyz/CandyPaper.vim'
     Plug 'ryanoasis/vim-devicons' "Nerd fonts
   " }}}
