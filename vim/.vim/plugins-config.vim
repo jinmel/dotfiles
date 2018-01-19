@@ -81,3 +81,6 @@
 " Polyglot {{{
   let g:polyglot_disabled = ['javascript.jsx', 'javascript', 'css']
 " }}}
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1

@@ -41,9 +41,10 @@
     Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
   " }}}
   " Completion {{{
-    Plug 'roxma/nvim-completion-manager'
-    Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
-    Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+    Plug 'zchee/deoplete-jedi'
+    Plug 'ternjs/tern_for_vim'
     Plug 'mattn/emmet-vim', {
           \  'for': [
           \    'html','haml','jinja','hbs','html.handlebars','xml','css','less','sass'
