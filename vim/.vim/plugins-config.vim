@@ -82,5 +82,7 @@
   let g:polyglot_disabled = ['javascript.jsx', 'javascript', 'css']
 " }}}
 
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
+" Use deoplete. {{{
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#sources#ternjs#docs = 1
+" }}}
