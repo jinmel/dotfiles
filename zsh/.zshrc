@@ -57,7 +57,7 @@ plugins=(git)
 
 # User configuration
 export GOPATH=$HOME/gocode
-export PATH="$GOPATH/bin:$HOME/.local/bin:$HOME/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$HOME/texbin:$GOPATH/bin:$HOME/.local/bin:$HOME/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 export EDITOR=nvim
 
@@ -146,7 +146,7 @@ export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 
 # nvm path setting
 
-export NVM_DIR=$(realpath ~/.nvm)
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # pyenv
