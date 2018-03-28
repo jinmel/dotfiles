@@ -45,6 +45,7 @@
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
     Plug 'zchee/deoplete-jedi'
+    Plug 'othree/jspc.vim'
     Plug 'ternjs/tern_for_vim'
     Plug 'mattn/emmet-vim', {
           \  'for': [
