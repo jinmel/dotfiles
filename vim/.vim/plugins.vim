@@ -57,6 +57,7 @@
     Plug 'junegunn/fzf.vim'
   " }}}
   " Language {{{
+      Plug 'lervag/vimtex'
     " Html CSS Javascript {{{
       Plug 'pangloss/vim-javascript'
       Plug 'ap/vim-css-color'

@@ -79,7 +79,7 @@
 " }}}
 
 " Polyglot {{{
-  let g:polyglot_disabled = ['javascript.jsx', 'javascript', 'css']
+  let g:polyglot_disabled = ['javascript.jsx', 'javascript', 'css', 'latex']
 " }}}
 
 " Use deoplete. {{{

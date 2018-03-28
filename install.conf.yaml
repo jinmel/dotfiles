@@ -65,6 +65,10 @@
         force: true
         create: true
         path: tools/pyenv-virtualenv
+    ~/.tmux:
+        force: true
+        create: true
+        path: tmux
 
 - tap:
   - neovim/neovim
