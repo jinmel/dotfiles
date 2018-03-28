@@ -8,7 +8,6 @@
   " Airline {{{
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'edkolev/tmuxline.vim'
   " }}}
   " Editing {{{
     Plug 'bkad/CamelCaseMotion'
@@ -42,6 +41,7 @@
     Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
   " }}}
   " Completion {{{
+    Plug 'w0rp/ale' " Asynchronous syntastic
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
     Plug 'zchee/deoplete-jedi'
@@ -57,7 +57,6 @@
     Plug 'junegunn/fzf.vim'
   " }}}
   " Language {{{
-      Plug 'lervag/vimtex'
     " Html CSS Javascript {{{
       Plug 'pangloss/vim-javascript'
       Plug 'ap/vim-css-color'
@@ -65,10 +64,10 @@
     " }}}
     " Python {{{
       Plug 'hdima/python-syntax'
-      Plug 'vim-syntastic/syntastic'
     " }}}
     " Other {{{
       Plug 'sheerun/vim-polyglot'
+      Plug 'lervag/vimtex'
     " }}}
   " }}}
   " Themes {{{
