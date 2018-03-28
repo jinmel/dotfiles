@@ -8,6 +8,7 @@
   " Airline {{{
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'edkolev/tmuxline.vim'
   " }}}
   " Editing {{{
     Plug 'bkad/CamelCaseMotion'
