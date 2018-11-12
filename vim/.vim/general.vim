@@ -35,6 +35,13 @@ set linespace=3
 set hidden
 set shell=/bin/bash
 
+" Color characters exceeding 80 characters
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
 if has("cscope")
     set csto=0
     set cst
@@ -56,3 +63,7 @@ autocmd BufReadPost *
       \ if line("'\"") > 1 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" |
       \ endif
+
+" Set python executable directory
+let g:python3_host_prog = '/Users/jinsuk/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = '/Users/jinsuk/.pyenv/versions/neovim2/bin/python'

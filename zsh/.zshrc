@@ -57,7 +57,7 @@ plugins=(git)
 
 # User configuration
 export GOPATH=$HOME/gocode
-export PATH="$HOME/texbin:$GOPATH/bin:$HOME/.local/bin:$HOME/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$GOPATH/bin:$HOME/bin:$HOME/texbin:$GOPATH/bin:$HOME/.local/bin:$HOME/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 export EDITOR=nvim
 
@@ -129,6 +129,8 @@ function preexec() {
     title "$1" "%m:%35<...<%~"
 }
 
+# Compiling
+export MACOSX_DEPLOYMENT_TARGET="10.14"
 
 # fzf key binding
 
@@ -155,6 +157,14 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# fzf
+
+# Setting fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='fd --type f'
+
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$HOME/.rvm/bin:$PATH"

@@ -1,6 +1,3 @@
-[user]
-    email = totorovirus@gmail.com
-    name = Jin Suk Park
 [push]
 	default = matching
 [credential]
@@ -12,4 +9,5 @@
 	process = git-lfs filter-process
 [alias]
     mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
-
+[core]
+	excludesfile = /Users/jinsuk/.gitignore

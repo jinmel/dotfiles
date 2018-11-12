@@ -43,6 +43,7 @@
   " Completion {{{
     Plug 'w0rp/ale' " Asynchronous syntastic
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/echodoc.vim'
     Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
     Plug 'zchee/deoplete-jedi'
     Plug 'othree/jspc.vim'
@@ -69,6 +70,9 @@
     " Other {{{
       Plug 'sheerun/vim-polyglot'
       Plug 'lervag/vimtex'
+      Plug 'google/vim-maktaba'
+      Plug 'bazelbuild/vim-bazel'
+      Plug 'bazelbuild/vim-ft-bzl'
     " }}}
   " }}}
   " Themes {{{
