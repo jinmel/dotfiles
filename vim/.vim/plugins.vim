@@ -6,7 +6,7 @@
     Plug 'Xuyuanp/nerdtree-git-plugin'
   " }}}
   " Airline {{{
-    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline', { 'commit': 'ada0ba8ae3eea778d165ec4794ee557df98fab87' }
     Plug 'vim-airline/vim-airline-themes'
   " }}}
   " Editing {{{
@@ -38,6 +38,7 @@
     Plug 'simnalamburt/vim-mundo'
     Plug 'mhinz/vim-startify'
     Plug 'majutsushi/tagbar'
+    Plug 'tpope/vim-obsession'
     Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
   " }}}
   " Completion {{{
@@ -46,6 +47,7 @@
     Plug 'Shougo/echodoc.vim'
     Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
     Plug 'zchee/deoplete-jedi'
+    Plug 'zchee/deoplete-clang'
     Plug 'othree/jspc.vim'
     Plug 'ternjs/tern_for_vim'
     Plug 'mattn/emmet-vim', {

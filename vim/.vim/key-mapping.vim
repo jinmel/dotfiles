@@ -49,6 +49,10 @@ vnoremap < <<CR>gv
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+"Mouse
+map <MiddleMouse> <Nop>
+imap <MiddleMouse> <Nop>
+
 " "Camel case motion (with shift)
 map <Space>w <Plug>CamelCaseMotion_w
 map <Space>b <Plug>CamelCaseMotion_b

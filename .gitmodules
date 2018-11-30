@@ -28,3 +28,6 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "tools/pyenv-update"]
+	path = tools/pyenv-update
+	url = git://github.com/pyenv/pyenv-update.git

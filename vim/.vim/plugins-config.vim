@@ -1,7 +1,3 @@
-" YouCompleteMe {{{
-  let g:ycm_confirm_extra_conf = 0
-  " let g:ycm_extra_conf_globlist = ['~/dev/*','!~/*']
-" }}}
 " CSS Comb {{{
   autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 " }}}
@@ -27,8 +23,8 @@
   let NERDTreeDirArrows=1
   let NERDTreeShowHidden=1
   let NERDTreeQuitOnOpen=0
-  let NERDTreeIgnore=['\.pyc$', '\~$']
-  let NERDTreeWinSize=30
+  let NERDTreeIgnore=['\.pyc$', '\~$', 'bazel-.+$[[dir]]']
+  let NERDTreeWinSize=40
 " }}}
 
 " Emmet (Zen coding) {{{
@@ -57,25 +53,13 @@
 " }}}
 
 " vim-clang-format {{{
-  let g:clang_format#style = "llvm"
+  let g:clang_format#style = "google"
   let g:clang_format#detect_style_file = 1
 " }}}
 
 " Tagbar {{{
   let g:tagbar_compact = 1
   let g:tagbar_width = 30
-" }}}
-
-" Syntastic {{{
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-
-  let b:syntastic_mode = "passive"
-  let g:syntastic_always_populate_loc_list = 0
-  let g:syntastic_auto_loc_list = 0
-  let g:syntastic_check_on_open = 0
-  let g:syntastic_check_on_wq = 0
 " }}}
 
 " Polyglot {{{
@@ -85,5 +69,17 @@
 " Use deoplete. {{{
   let g:deoplete#enable_at_startup = 1
   let g:deoplete#sources#ternjs#docs = 1
+  let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/7.0.0/lib/libclang.dylib'
+  let g:deoplete#sources#clang#clang_header = '/usr/local/Cellar/llvm/7.0.0/lib/clang/7.0.0'
 " }}}
-"
+" Ctrlp {{{
+  let g:ctrlp_working_path_mode = 'ra'
+  let g:ctrlp_map = '<c-p>'
+  let g:ctrlp_cmd = 'CtrlP'
+" }}}
+" Ale {{{
+  let g:ale_linters = {
+        \ 'python': ['pylint', 'yapf', 'isort'],
+        \ 'cpp': ['cpplint'],
+        \}
+" }}}
