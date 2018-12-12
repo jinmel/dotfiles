@@ -22,7 +22,7 @@ vmap <Leader>P "+P
 "Keep the cursor in the same place after yank
 vmap y ygv<Esc>
 
-nmap <F5> :MundoToggle<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap <silent> <F11> :NERDTreeTabsToggle<CR>
 
@@ -39,8 +39,11 @@ nmap g<C-p> :GitFiles<CR>
 nmap <s-tab> :Tags<CR>
 
 "clang-format
-nnoremap gf :ClangFormat<CR>
-vnoremap gf :ClangFormat<CR>
+autocmd FileType c,cpp,objc nnoremap <buffer>gf :ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer>gf :ClangFormat<CR>
+
+"yapf
+autocmd FileType python nnoremap <buffer>gf :Yapf<CR>
 
 "Keep selection after indent
 vnoremap > ><CR>gv
@@ -57,4 +60,7 @@ imap <MiddleMouse> <Nop>
 map <Space>w <Plug>CamelCaseMotion_w
 map <Space>b <Plug>CamelCaseMotion_b
 map <Space>e <Plug>CamelCaseMotion_e
+
+" Langclient
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 " }}}

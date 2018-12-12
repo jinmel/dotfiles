@@ -11,8 +11,10 @@
   " }}}
   " Editing {{{
     Plug 'bkad/CamelCaseMotion'
+    Plug 'fisadev/vim-isort'
     Plug 'joom/vim-commentary'
     Plug 'rhysd/vim-clang-format'
+    Plug 'mindriot101/vim-yapf'
     Plug 'Yggdroot/indentLine'
     " vim-surround {{{
       Plug 'tpope/vim-surround'
@@ -35,7 +37,6 @@
     Plug 'junegunn/vim-easy-align'
     Plug 'vim-scripts/sudo.vim' " e sudo:/etc/passwd
     Plug 'godlygeek/tabular'
-    Plug 'simnalamburt/vim-mundo'
     Plug 'mhinz/vim-startify'
     Plug 'majutsushi/tagbar'
     Plug 'tpope/vim-obsession'
@@ -43,13 +44,12 @@
   " }}}
   " Completion {{{
     Plug 'w0rp/ale' " Asynchronous syntastic
+    Plug 'autozimu/LanguageClient-neovim', {
+          \  'branch': 'next',
+          \  'do': 'bash install.sh',
+          \}
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'Shougo/echodoc.vim'
-    Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-    Plug 'zchee/deoplete-jedi'
-    Plug 'zchee/deoplete-clang'
-    Plug 'othree/jspc.vim'
-    Plug 'ternjs/tern_for_vim'
     Plug 'mattn/emmet-vim', {
           \  'for': [
           \    'html','haml','jinja','hbs','html.handlebars','xml','css','less','sass'

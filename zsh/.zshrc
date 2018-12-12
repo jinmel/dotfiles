@@ -166,8 +166,7 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$HOME/.rvm/bin:$PATH"
-
-# OPAM configuration
-. /Users/crank/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# LLVM
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH" echo export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH" echo export PATH="/usr/local/opt/llvm/bin:$PATH"
