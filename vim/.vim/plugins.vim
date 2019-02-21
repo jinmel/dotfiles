@@ -10,6 +10,7 @@
     Plug 'vim-airline/vim-airline-themes'
   " }}}
   " Editing {{{
+    Plug 'maxbrunsfeld/vim-yankstack'
     Plug 'bkad/CamelCaseMotion'
     Plug 'fisadev/vim-isort'
     Plug 'joom/vim-commentary'

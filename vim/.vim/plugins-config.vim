@@ -79,6 +79,7 @@
   let g:ale_linters = {
         \ 'python': ['pylint', 'yapf', 'isort'],
         \ 'cpp': ['cpplint'],
+        \ 'javascript': ['eslint']
         \}
 " }}}
 " Langserver {{{

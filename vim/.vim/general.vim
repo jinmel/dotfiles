@@ -1,3 +1,5 @@
+set secure
+set nomodeline
 set nocompatible
 set linebreak
 set number
