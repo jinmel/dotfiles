@@ -22,7 +22,6 @@ vmap <Leader>P "+P
 "Keep the cursor in the same place after yank
 vmap y ygv<Esc>
 
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap <silent> <F11> :NERDTreeTabsToggle<CR>
 
@@ -61,6 +60,10 @@ map <Space>w <Plug>CamelCaseMotion_w
 map <Space>b <Plug>CamelCaseMotion_b
 map <Space>e <Plug>CamelCaseMotion_e
 
-" Langclient
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+" Langclient(COC)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <leader>rn <Plug>(coc-rename)
 " }}}

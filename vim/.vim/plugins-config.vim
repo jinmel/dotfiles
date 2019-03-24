@@ -83,14 +83,7 @@
         \}
 " }}}
 " Langserver {{{
-  set hidden
-
-  let g:LanguageClient_serverCommands = {
-      \ 'cpp': ['/usr/local/opt/llvm/bin/clangd'],
-      \ 'python': ['/Users/jinsuk/.pyenv/versions/neovim3/bin/pyls'],
-      \ }
 " }}}
-
 " Yapf {{{
   let g:yapf_style = "google"
 " }}}

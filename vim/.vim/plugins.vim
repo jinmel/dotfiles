@@ -44,13 +44,8 @@
     Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
   " }}}
   " Completion {{{
-    Plug 'w0rp/ale' " Asynchronous syntastic
-    Plug 'autozimu/LanguageClient-neovim', {
-          \  'branch': 'next',
-          \  'do': 'bash install.sh',
-          \}
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'Shougo/echodoc.vim'
+    Plug 'w0rp/ale' " Asynchronous syntax check
+    Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
     Plug 'mattn/emmet-vim', {
           \  'for': [
           \    'html','haml','jinja','hbs','html.handlebars','xml','css','less','sass'

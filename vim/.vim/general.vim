@@ -35,6 +35,7 @@ set nobackup
 set number
 set linespace=3
 set hidden
+set cmdheight=2
 set shell=/bin/bash
 
 " Color characters exceeding 80 characters
@@ -67,5 +68,5 @@ autocmd BufReadPost *
       \ endif
 
 " Set python executable directory
-let g:python3_host_prog = '/Users/jinsuk/.pyenv/versions/neovim3/bin/python'
-let g:python_host_prog = '/Users/jinsuk/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = $HOME.'/.pyenv/versions/3.6.4/bin/python'
+let g:python_host_prog = $HOME.'/.pyenv/versions/neovim2/bin/python'
