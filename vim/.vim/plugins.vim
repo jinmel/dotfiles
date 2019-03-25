@@ -6,7 +6,7 @@
     Plug 'Xuyuanp/nerdtree-git-plugin'
   " }}}
   " Airline {{{
-    Plug 'vim-airline/vim-airline', { 'commit': 'ada0ba8ae3eea778d165ec4794ee557df98fab87' }
+    Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
   " }}}
   " Editing {{{
