@@ -56,8 +56,9 @@ DISABLE_AUTO_TITLE="true"
 plugins=(git vagrant pyenv)
 
 # User configuration
+# Golang path
 export GOPATH=$HOME/gocode
-export PATH="$GOPATH/bin:$HOME/bin:$HOME/texbin:$GOPATH/bin:$HOME/.local/bin:$HOME/.fzf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$GOPATH/bin:$HOME/bin:$HOME/texbin:$HOME/.local/bin:$HOME/.fzf/bin:$PATH"
 
 export EDITOR=nvim
 
@@ -69,25 +70,6 @@ export LANGUAGE=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 
@@ -140,33 +122,20 @@ export MACOSX_DEPLOYMENT_TARGET="10.14"
 
 source $ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# linuxbrew
-
-export PATH="$HOME/.linuxbrew/bin:$PATH"
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-
-# nvm path setting
+# nvm
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # pyenv
-
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # fzf
-
 # Setting fd as the default source for fzf
 export FZF_DEFAULT_COMMAND='fd --type f'
 
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-# LLVM
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-export PATH="/usr/local/opt/llvm/bin:$PATH" echo export PATH="/usr/local/opt/llvm/bin:$PATH"
-export PATH="/usr/local/opt/llvm/bin:$PATH" echo export PATH="/usr/local/opt/llvm/bin:$PATH"
