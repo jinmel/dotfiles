@@ -11,7 +11,6 @@
   " }}}
   " Editing {{{
     Plug 'maxbrunsfeld/vim-yankstack'
-    Plug 'bkad/CamelCaseMotion'
     Plug 'fisadev/vim-isort'
     Plug 'joom/vim-commentary'
     Plug 'rhysd/vim-clang-format'
@@ -35,16 +34,13 @@
     Plug 'airblade/vim-gitgutter'
   " }}}
   " Utility {{{
-    Plug 'junegunn/vim-easy-align'
     Plug 'vim-scripts/sudo.vim' " e sudo:/etc/passwd
-    Plug 'godlygeek/tabular'
     Plug 'mhinz/vim-startify'
     Plug 'majutsushi/tagbar'
     Plug 'tpope/vim-obsession'
     Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
   " }}}
   " Completion {{{
-    Plug 'w0rp/ale' " Asynchronous syntax check
     Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
     Plug 'mattn/emmet-vim', {
           \  'for': [
@@ -63,20 +59,15 @@
       Plug 'miripiruni/CSScomb-for-Vim'
     " }}}
     " Python {{{
-      Plug 'hdima/python-syntax'
+      " Plug 'hdima/python-syntax'
     " }}}
     " Other {{{
       Plug 'sheerun/vim-polyglot'
-      Plug 'lervag/vimtex'
-      Plug 'google/vim-maktaba'
-      Plug 'bazelbuild/vim-bazel'
-      Plug 'bazelbuild/vim-ft-bzl'
     " }}}
   " }}}
   " Themes {{{
     Plug 'flazz/vim-colorschemes'
     Plug 'altercation/vim-colors-solarized'
-    Plug 'dfxyz/CandyPaper.vim'
     Plug 'ryanoasis/vim-devicons' "Nerd fonts
   " }}}
   call plug#end()

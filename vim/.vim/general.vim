@@ -13,7 +13,7 @@ filetype plugin indent on
 
 set encoding=utf-8
 set fileencodings=utf-8
-set tags=./tags,./TAGS,tags,TAGS
+set tags=TAGS
 set autoindent
 set smartindent
 set cindent
@@ -69,4 +69,3 @@ autocmd BufReadPost *
 
 " Set python executable directory
 let g:python3_host_prog = $HOME.'/.pyenv/versions/3.6.4/bin/python'
-let g:python_host_prog = $HOME.'/.pyenv/versions/neovim2/bin/python'

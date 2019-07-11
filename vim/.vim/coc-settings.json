@@ -10,5 +10,7 @@
         }
       }
     }
-  }
+  },
+  "python.jediEnabled": true,
+  "java.errors.incompleteClasspath.severity": "ignore"
 }
