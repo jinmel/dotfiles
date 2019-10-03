@@ -9,7 +9,7 @@ alias vim="nvim"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="dpoggi"
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,14 +53,12 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vagrant pyenv)
+plugins=(git vagrant pyenv kubectl)
 
 # User configuration
-# Golang path
-export GOPATH=$HOME/gocode
-export PATH="$GOPATH/bin:$HOME/bin:$HOME/texbin:$HOME/.local/bin:$HOME/.fzf/bin:$PATH"
-
-export EDITOR=nvim
+if [ -r ~/.zshrc.user ]; then
+  source ~/.zshrc.user
+fi
 
 # Enable oh my zsh
 source $ZSH/oh-my-zsh.sh
@@ -110,9 +108,6 @@ function precmd() {
 function preexec() {
     title "$1" "%m:%35<...<%~"
 }
-
-# Compiling
-export MACOSX_DEPLOYMENT_TARGET="10.14"
 
 # fzf key binding
 
