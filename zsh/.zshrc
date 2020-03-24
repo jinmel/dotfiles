@@ -71,14 +71,6 @@ export LC_ALL=en_US.UTF-8
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 
-case "$TERM" in
-    screen*)
-        local a=${(V)1//\%/\%\%}
-        precmd() {
-        }
-        ;;
-esac
-
 function title() {
     # escape '%' chars in $1, make nonprintables visible
     local a=${(V)1//\%/\%\%}
