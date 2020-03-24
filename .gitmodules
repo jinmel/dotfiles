@@ -25,9 +25,6 @@
 [submodule "tools/dotbot-brew"]
 	path = tools/dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
-[submodule "tmux/plugins/tpm"]
-	path = tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
 [submodule "tools/pyenv-update"]
 	path = tools/pyenv-update
 	url = git://github.com/pyenv/pyenv-update.git

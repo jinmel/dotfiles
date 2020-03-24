@@ -75,7 +75,6 @@ case "$TERM" in
     screen*)
         local a=${(V)1//\%/\%\%}
         precmd() {
-            print -Pn '\033k$a %~\033\\';
         }
         ;;
 esac
@@ -97,16 +96,6 @@ function title() {
             ;;
     esac
 
-}
-
-# precmd is called just before the prompt is printed
-function precmd() {
-    title "zsh" "%m:%55<...<%~"
-}
-
-# preexec is called just before any command line is executed
-function preexec() {
-    title "$1" "%m:%35<...<%~"
 }
 
 # fzf key binding
