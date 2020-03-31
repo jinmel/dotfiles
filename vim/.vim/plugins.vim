@@ -59,9 +59,6 @@
       Plug 'ap/vim-css-color'
       Plug 'miripiruni/CSScomb-for-Vim'
     " }}}
-    " Python {{{
-      " Plug 'hdima/python-syntax'
-    " }}}
     " Other {{{
       Plug 'sheerun/vim-polyglot'
     " }}}
