@@ -13,9 +13,6 @@
 [submodule "tools/nvm"]
 	path = tools/nvm
 	url = https://github.com/creationix/nvm.git
-[submodule "tools/pyenv-virtualenv"]
-	path = tools/pyenv-virtualenv
-	url = https://github.com/yyuu/pyenv-virtualenv.git
 [submodule "zsh/zsh-plugins/zsh-autosuggestions"]
 	path = zsh/zsh-plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
