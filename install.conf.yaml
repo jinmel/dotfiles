@@ -61,10 +61,6 @@
         force : true
         create: true
         path: tools/pyenv
-    ~/.pyenv/plugins/pyenv-virtualenv:
-        force: true
-        create: true
-        path: tools/pyenv-virtualenv
     ~/.tmux:
         force: true
         create: true
