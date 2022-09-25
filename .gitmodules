@@ -22,3 +22,9 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "tools/pyenv"]
+	path = tools/pyenv
+	url = https://github.com/pyenv/pyenv
+[submodule "tools/pyenv-virtualenv"]
+	path = tools/pyenv-virtualenv
+	url = https://github.com/pyenv/pyenv-virtualenv
