@@ -1,18 +1,9 @@
 [submodule "dotbot"]
 	path = tools/dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "gef"]
-	path = tools/gef
-	url = https://github.com/hugsy/gef
 [submodule "oh-my-zsh"]
 	path = zsh/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "tools/fzf"]
-	path = tools/fzf
-	url = https://github.com/junegunn/fzf
-[submodule "tools/nvm"]
-	path = tools/nvm
-	url = https://github.com/creationix/nvm.git
 [submodule "zsh/zsh-plugins/zsh-autosuggestions"]
 	path = zsh/zsh-plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
@@ -22,9 +13,3 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "tools/pyenv"]
-	path = tools/pyenv
-	url = https://github.com/pyenv/pyenv
-[submodule "tools/pyenv-virtualenv"]
-	path = tools/pyenv-virtualenv
-	url = https://github.com/pyenv/pyenv-virtualenv
