@@ -12,7 +12,6 @@
   " }}}
   " Editing {{{
     Plug 'maxbrunsfeld/vim-yankstack'
-    Plug 'fisadev/vim-isort'
     Plug 'joom/vim-commentary'
     Plug 'rhysd/vim-clang-format'
     Plug 'mindriot101/vim-yapf'
@@ -48,6 +47,7 @@
           \    'html','haml','jinja','hbs','html.handlebars','xml','css','less','sass'
           \  ]
           \}
+    Plug 'github/copilot.vim', {'branch': 'release'}
   " }}}
   " Fuzzy Finder {{{
     Plug 'junegunn/fzf', { 'dir': '~/.fzf' }

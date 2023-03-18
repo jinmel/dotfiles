@@ -64,14 +64,6 @@
   let g:tagbar_width = 30
 " }}}
 
-" Polyglot {{{
-  let g:polyglot_disabled = ['javascript.jsx', 'javascript', 'css', 'latex']
-" }}}
-
-" Use deoplete. {{{
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#sources#ternjs#docs = 1
-" }}}
 " Ctrlp {{{
   let g:ctrlp_working_path_mode = 'ra'
   let g:ctrlp_map = '<c-p>'
@@ -83,8 +75,6 @@
         \ 'cpp': ['cpplint'],
         \ 'javascript': ['eslint']
         \}
-" }}}
-" Langserver {{{
 " }}}
 " Yapf {{{
   let g:yapf_style = "google"

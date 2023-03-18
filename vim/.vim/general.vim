@@ -37,6 +37,7 @@ set linespace=3
 set hidden
 set cmdheight=2
 set shell=/bin/bash
+set regexpengine=0
 
 " Color characters exceeding 80 characters
 if exists('+colorcolumn')
@@ -67,5 +68,5 @@ autocmd BufReadPost *
       \   exe "normal! g`\"" |
       \ endif
 
-" Set python executable directory
-let g:python3_host_prog = $HOME.'/.pyenv/versions/3.6.4/bin/python'
+" Should be loaded before the plugins
+let g:polyglot_disabled = ['javascript.jsx', 'javascript', 'css', 'latex']

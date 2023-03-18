@@ -1,5 +1,5 @@
+source \~/.vim/general.vim
 source \~/.vim/plugins.vim
 source \~/.vim/plugins-config.vim
-source \~/.vim/general.vim
 source \~/.vim/key-mapping.vim
 source \~/.vim/theme.vim
