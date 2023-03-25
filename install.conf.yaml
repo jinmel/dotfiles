@@ -30,9 +30,6 @@
     ~/.gdbinit:
         force: true
         path: gdb/.gdbinit
-    ~/.tools:
-        force: true
-        path: tools
     ~/.oh-my-zsh:
         force: true
         create: true
@@ -53,14 +50,6 @@
         force: true
         create: true
         path: git/.gitconfig
-    ~/.nvm:
-        force: true
-        create: true
-        path: tools/nvm
-    ~/.pyenv:
-        force : true
-        create: true
-        path: tools/pyenv
     ~/.tmux:
         force: true
         create: true
