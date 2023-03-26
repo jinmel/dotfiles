@@ -27,9 +27,6 @@
         force: true
         create: true
         path: vim/.vim
-    ~/.gdbinit:
-        force: true
-        path: gdb/.gdbinit
     ~/.oh-my-zsh:
         force: true
         create: true
