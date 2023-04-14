@@ -23,7 +23,7 @@ vmap <Leader>P "+P
 vmap y ygv<Esc>
 
 nmap <F8> :TagbarToggle<CR>
-nmap <F10> :NERDTreeTabsToggle<CR>
+nmap <F10> :NeoTreeShowToggle<CR>
 
 "Redraw screen
 nmap <Leader>r :redraw!<CR>

@@ -1,10 +1,12 @@
 " Plugins {{{
   call plug#begin()
   " NERDTree {{{
-    Plug 'scrooloose/nerdtree'
-    Plug 'jistr/vim-nerdtree-tabs'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
-  " }}}
+      Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x' }
+    " Deps for neo-tree
+      Plug 'nvim-lua/plenary.nvim'
+      Plug 'nvim-tree/nvim-web-devicons'
+      Plug 'MunifTanjim/nui.nvim', {'branch': 'main'}
+    " }}}
   " Airline {{{
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -34,14 +36,13 @@
     Plug 'airblade/vim-gitgutter'
   " }}}
   " Utility {{{
-    Plug 'vim-scripts/sudo.vim' " e sudo:/etc/passwd
     Plug 'mhinz/vim-startify'
     Plug 'majutsushi/tagbar'
     Plug 'tpope/vim-obsession'
     Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
   " }}}
   " Completion {{{
-    Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'mattn/emmet-vim', {
           \  'for': [
           \    'html','haml','jinja','hbs','html.handlebars','xml','css','less','sass'
@@ -55,16 +56,15 @@
   " }}}
   " Language {{{
     " Html CSS Javascript {{{
-      Plug 'pangloss/vim-javascript'
       Plug 'ap/vim-css-color'
       Plug 'miripiruni/CSScomb-for-Vim'
     " }}}
-    " Other {{{
-      Plug 'sheerun/vim-polyglot'
+    " Syntax {{{
+      Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+      Plug 'glepnir/zephyr-nvim'
     " }}}
   " }}}
   " Themes {{{
-    Plug 'flazz/vim-colorschemes'
     Plug 'altercation/vim-colors-solarized'
     Plug 'ryanoasis/vim-devicons' "Nerd fonts
   " }}}
