@@ -16,7 +16,6 @@
     Plug 'maxbrunsfeld/vim-yankstack'
     Plug 'joom/vim-commentary'
     Plug 'rhysd/vim-clang-format'
-    Plug 'mindriot101/vim-yapf'
     Plug 'Yggdroot/indentLine'
     " vim-surround {{{
       Plug 'tpope/vim-surround'
@@ -57,7 +56,6 @@
   " Language {{{
     " Html CSS Javascript {{{
       Plug 'ap/vim-css-color'
-      Plug 'miripiruni/CSScomb-for-Vim'
     " }}}
     " Syntax {{{
       Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

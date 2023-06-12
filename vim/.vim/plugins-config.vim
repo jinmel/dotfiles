@@ -1,14 +1,3 @@
-" CSS Comb {{{
-  autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
-" }}}
-" Pymode {{{
-  let g:pymode_rope = 0
-  let g:pymode_rope_completion = 0 "disable rope completion
-  let g:pymode_lint = 0
-  let g:python_highlight_all = 1
-  autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-  autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-" }}}
 " Airline {{{
   let g:airline#extensions#tabline#enabled = 1
   let g:airline_powerline_fonts = 1
@@ -64,18 +53,6 @@
   let g:tagbar_width = 30
 " }}}
 
-" Ctrlp {{{
-  let g:ctrlp_working_path_mode = 'ra'
-  let g:ctrlp_map = '<c-p>'
-  let g:ctrlp_cmd = 'CtrlP'
-" }}}
-" Ale {{{
-  let g:ale_linters = {
-        \ 'python': ['pylint', 'yapf', 'isort'],
-        \ 'cpp': ['cpplint'],
-        \ 'javascript': ['eslint']
-        \}
-" }}}
-" Yapf {{{
-  let g:yapf_style = "google"
+" coc {{{
+  let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver', 'coc-solidity', 'coc-rls']
 " }}}

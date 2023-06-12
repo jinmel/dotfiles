@@ -67,6 +67,3 @@ autocmd BufReadPost *
       \ if line("'\"") > 1 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" |
       \ endif
-
-" Should be loaded before the plugins
-let g:polyglot_disabled = ['javascript.jsx', 'javascript', 'css', 'latex']

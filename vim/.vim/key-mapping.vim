@@ -41,20 +41,16 @@ nmap <s-tab> :Tags<CR>
 autocmd FileType c,cpp,objc nnoremap <buffer>gf :ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer>gf :ClangFormat<CR>
 
-"yapf
-autocmd FileType python nnoremap <buffer>gf :Yapf<CR>
-
 "Keep selection after indent
 vnoremap > ><CR>gv
 vnoremap < <<CR>gv
 
-
+" coc.nvim
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-" coc.nvim
 " Insert <tab> when previous text is space, refresh completion if not.
 inoremap <silent><expr> <TAB>
   \ coc#pum#visible() ? coc#pum#next(1):
@@ -69,16 +65,6 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-"Mouse
-map <MiddleMouse> <Nop>
-imap <MiddleMouse> <Nop>
-
-" "Camel case motion (with shift)
-map <Space>w <Plug>CamelCaseMotion_w
-map <Space>b <Plug>CamelCaseMotion_b
-map <Space>e <Plug>CamelCaseMotion_e
-
-" Langclient(COC)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
