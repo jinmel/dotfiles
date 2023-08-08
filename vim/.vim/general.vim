@@ -5,7 +5,7 @@ set linebreak
 set number
 syntax on
 set mouse=a
-set backspace=2
+set backspace=indent,eol,start
 set foldmethod=marker
 set foldlevelstart=1
 
@@ -38,10 +38,11 @@ set hidden
 set cmdheight=2
 set shell=/bin/bash
 set regexpengine=0
+set updatetime=100
 
-" Color characters exceeding 80 characters
+" Color characters exceeding 120 characters
 if exists('+colorcolumn')
-  set colorcolumn=80
+  set colorcolumn=120
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif

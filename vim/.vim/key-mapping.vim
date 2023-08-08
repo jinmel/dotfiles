@@ -1,5 +1,3 @@
-" Some Useful Key Mappings {{{
-
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
 "for unhighlighing the selections
@@ -53,9 +51,9 @@ endfunction
 
 " Insert <tab> when previous text is space, refresh completion if not.
 inoremap <silent><expr> <TAB>
-  \ coc#pum#visible() ? coc#pum#next(1):
-  \ <SID>check_back_space() ? "\<Tab>" :
-  \ coc#refresh()
+      \ coc#pum#visible() ? coc#pum#next(1):
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " Use <c-space> to trigger completion.
@@ -84,4 +82,6 @@ endfunction
 " Formatting selected code
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
-" }}}
+
+nmap <leader>gb :Git_blame<CR>
+nnoremap <silent> <leader>gg :LazyGit<CR>

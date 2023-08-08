@@ -6,42 +6,6 @@
   set laststatus=2
   set t_Co=256
 " }}}
-" NERDTree {{{
-  let g:NERDTreeMapChangeRoot =  "`"
-  let g:WebDevIconsNerdTreeGitPluginForceVAlign=1
-
-  let NERDTreeMinimalUI=1
-  let NERDTreeDirArrows=1
-  let NERDTreeShowHidden=1
-  let NERDTreeQuitOnOpen=0
-  let NERDTreeIgnore=['\.pyc$', '\~$', 'bazel-.+$[[dir]]']
-  let NERDTreeWinSize=40
-" }}}
-
-" Emmet (Zen coding) {{{
-  let g:user_emmet_mode='i'
-  let g:user_emmet_leader_key='<C-Y>'
-  let g:user_emmet_settings={
-        \ 'xml': {
-        \   'extends': 'html',
-        \},
-        \ 'haml': {
-        \   'extends': 'html',
-        \},
-        \ 'jinja': {
-        \   'extends': 'html',
-        \},
-        \ 'jsx': {
-        \   'extends': 'html',
-        \},
-        \ 'hbs': {
-        \   'extends': 'html',
-        \},
-        \ 'html.handlebars': {
-        \   'extends': 'html',
-        \},
-      \}
-" }}}
 
 " vim-clang-format {{{
   let g:clang_format#style = "google"
@@ -52,7 +16,58 @@
   let g:tagbar_compact = 1
   let g:tagbar_width = 30
 " }}}
+" IndentLine {{{
+  let g:indentLine_setConceal = 0
+" }}}
 
 " coc {{{
-  let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver', 'coc-solidity', 'coc-rls']
+  let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver', 'coc-solidity', 'coc-rls', 'coc-emmet']
 " }}}
+
+" copilot {{{
+  let g:copilot_filetypes = {'gitcommit': v:true}
+" }}}
+
+" lazygit {{{
+  let g:lazygit_floating_window_use_plenary = 1
+  let g:lazygit_use_neovim_remote = 0
+" }}}
+
+lua << EOF
+  require'nvim-treesitter.configs'.setup {
+    -- A list of parser names, or "all" (the five listed parsers should always be installed)
+    ensure_installed = { "python", "svelte", "typescript", "javascript", "rust", "go" },
+
+    -- Install parsers synchronously (only applied to `ensure_installed`)
+    sync_install = false,
+
+    -- Automatically install missing parsers when entering buffer
+    -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+    auto_install = true,
+
+    -- List of parsers to ignore installing (for "all")
+    ignore_install = { },
+
+    ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
+    -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
+
+    highlight = {
+      enable = true,
+
+      -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
+      -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
+      -- the name of the parser)
+      -- list of language that will be disabled
+      disable = { "" },
+
+      -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+      -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+      -- Using this option may slow down your editor, and you may see some duplicate highlights.
+      -- Instead of true it can also be a list of languages
+      additional_vim_regex_highlighting = false,
+    },
+    indent = {
+      enable = true,
+    },
+  }
+EOF

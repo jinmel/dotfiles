@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 export ZSH_PLUGINS=$HOME/.zsh-plugins
+export EDITOR=nvim
 
 # Aliases
 alias tmux="TERM=screen-256color tmux"
@@ -106,7 +107,7 @@ export NVM_DIR="$HOME/.nvm"
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
 # fzf

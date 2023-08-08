@@ -1,5 +1,8 @@
 {
   "suggest.enablePreselect": false,
   "suggest.noselect": true,
-  "python.analysis.typeCheckingMode": "off"
+  "python.analysis.typeCheckingMode": "off",
+  "emmet.includeLanguages": {
+    "svelte": "html"
+  }
 }
