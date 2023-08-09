@@ -56,11 +56,6 @@ DISABLE_AUTO_TITLE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git vagrant pyenv kubectl)
 
-# User configuration
-if [ -r ~/.zshrc.user ]; then
-  source ~/.zshrc.user
-fi
-
 # Enable oh my zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -117,3 +112,8 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# User configuration
+if [ -r ~/.zshrc.user ]; then
+  source ~/.zshrc.user
+fi
