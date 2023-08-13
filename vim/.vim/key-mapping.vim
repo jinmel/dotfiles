@@ -1,4 +1,4 @@
-nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
+nnoremap <silent> <BS> :TmuxNavigateLeft<CR>
 
 "for unhighlighing the selections
 nmap <Space>x :let @/=''<CR>
@@ -20,8 +20,9 @@ vmap <Leader>P "+P
 "Keep the cursor in the same place after yank
 vmap y ygv<Esc>
 
-nmap <F8> :TagbarToggle<CR>
-nmap <F10> :NeoTreeShowToggle<CR>
+nmap <F8> :AerialToggle!<CR>
+nmap <F9> :AerialNavToggle<CR>
+nmap <F10> :NvimTreeToggle<CR>
 
 "Redraw screen
 nmap <Leader>r :redraw!<CR>
@@ -29,11 +30,11 @@ nmap <Leader>r :redraw!<CR>
 "New Tab
 nmap <Leader>t :tabnew<CR>
 
-"fzf.vim
-nmap <tab> :Buffer<CR>
-nmap <C-p> :Files<CR>
-nmap g<C-p> :GitFiles<CR>
-nmap <s-tab> :Tags<CR>
+"telescope
+nnoremap <tab> :Telescope buffers<CR>
+nnoremap <C-p> :Telescope find_files<CR>
+nnoremap g<C-p> :Telescope git_files<CR>
+nnoremap <s-tab> :Telescope treesitter<CR>
 
 "clang-format
 autocmd FileType c,cpp,objc nnoremap <buffer>gf :ClangFormat<CR>
@@ -83,5 +84,5 @@ endfunction
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
-nmap <leader>gb :Git_blame<CR>
-nnoremap <silent> <leader>gg :LazyGit<CR>
+nmap <leader>gb :Git blame<CR>
+nnoremap <silent> <leader>gg :Neogit<CR>

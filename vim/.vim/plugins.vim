@@ -1,75 +1,54 @@
 " Plugins {{{
   call plug#begin()
-  " NERDTree {{{
-      Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x' }
-    " Deps for neo-tree
-      Plug 'nvim-lua/plenary.nvim'
-      Plug 'nvim-tree/nvim-web-devicons'
-      Plug 'MunifTanjim/nui.nvim', {'branch': 'main'}
-    " }}}
-  " Airline {{{
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'edkolev/tmuxline.vim'
+  " Deps {{{
+    Plug 'nvim-lua/plenary.nvim'
+  " }}}
+  " File browser tree {{{
+    Plug 'nvim-tree/nvim-web-devicons'
+    Plug 'nvim-tree/nvim-tree.lua'
+  " Statusline {{{
+    Plug 'nvim-lualine/lualine.nvim'
   " }}}
   " Editing {{{
-    Plug 'maxbrunsfeld/vim-yankstack'
-    Plug 'terrortylor/nvim-comment'
-    Plug 'rhysd/vim-clang-format'
-    Plug 'Yggdroot/indentLine'
-    " vim-surround {{{
-      Plug 'tpope/vim-surround'
-      " 'Hello world!' -> <a>Hello world!</a>
-      " cs'<q>
-      " 'Hello world!' -> Hello world!
-      " ds'
+    Plug 'numToStr/Comment.nvim'
+    Plug 'lukas-reineke/indent-blankline.nvim'
+    Plug 'kylechui/nvim-surround'
     " }}}
-    " auto-pairs {{{
-      Plug 'windwp/nvim-autopairs'
-    " }}}
-    Plug 'tpope/vim-repeat'
-    Plug 'tpope/vim-abolish' "abbreviation utility
+    Plug 'windwp/nvim-autopairs'
   " }}}
   " VCS {{{
     Plug 'tpope/vim-fugitive'
     Plug 'lewis6991/gitsigns.nvim'
     Plug 'NeogitOrg/neogit'
     Plug 'sindrets/diffview.nvim'
-    " }}}
-
+  " }}}
   " Utility {{{
-    Plug 'mhinz/vim-startify'
-    Plug 'majutsushi/tagbar'
-    Plug 'tpope/vim-obsession'
+    Plug 'goolord/alpha-nvim'
+    Plug 'stevearc/aerial.nvim'
+    Plug 'rmagatti/auto-session'
     Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
   " }}}
   " Completion {{{
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'github/copilot.vim', {'branch': 'release'}
+    Plug 'zbirenbaum/copilot.lua'
   " }}}
   " Fuzzy Finder {{{
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
-    Plug 'junegunn/fzf.vim'
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+    " Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
+    " Plug 'junegunn/fzf.vim'
   " }}}
   " Highlighting {{{
-    " Html CSS Javascript {{{
-      Plug 'ap/vim-css-color'
-    " }}}
-    " Syntax {{{
-      Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    " }}}
+    Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   " }}}
   " Themes {{{
     Plug 'glepnir/zephyr-nvim'
     Plug 'folke/tokyonight.nvim'
-    Plug 'altercation/vim-colors-solarized'
-    Plug 'ryanoasis/vim-devicons' "Nerd fonts
   " }}}
   call plug#end()
 " }}}
 lua << EOF
 require("nvim-autopairs").setup {}
-require("nvim_comment").setup()
 require('gitsigns').setup{
   on_attach = function(bufnr)
     local gs = package.loaded.gitsigns
@@ -113,4 +92,110 @@ require('gitsigns').setup{
   end
 }
 require("neogit").setup()
+require('lualine').setup {
+  options = {
+    theme = 'tokyonight'
+  },
+  tabline = {
+    lualine_a = {'buffers'},
+    lualine_b = {'branch'},
+    lualine_c = {'filename'},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {'tabs'}
+  },
+  extensions = {'fzf', 'neo-tree', 'fugitive'}
+}
+require('alpha').setup(require'alpha.themes.startify'.config)
+require('nvim-surround').setup()
+require('auto-session')
+require('aerial').setup {
+  on_attach = function(bufnr)
+    -- Jump forwards/backwards with '{' and '}'
+    vim.keymap.set('n', '{', '<cmd>AerialPrev<CR>', {buffer = bufnr})
+    vim.keymap.set('n', '}', '<cmd>AerialNext<CR>', {buffer = bufnr})
+  end
+}
+require('Comment').setup()
+require('colorizer').setup()
+require("nvim-tree").setup()
+require('copilot').setup({
+  panel = {
+    enabled = true,
+    auto_refresh = false,
+    keymap = {
+      jump_prev = "[[",
+      jump_next = "]]",
+      accept = "<CR>",
+      refresh = "gr",
+      open = "<M-CR>"
+    },
+    layout = {
+      position = "bottom", -- | top | left | right
+      ratio = 0.4
+    },
+  },
+  suggestion = {
+    enabled = true,
+    auto_trigger = true,
+    debounce = 75,
+    keymap = {
+      accept = "<M-l>",
+      accept_word = false,
+      accept_line = false,
+      next = "<M-]>",
+      prev = "<M-[>",
+      dismiss = "<C-]>",
+    },
+  },
+  filetypes = {
+    yaml = false,
+    markdown = false,
+    help = false,
+    gitcommit = true,
+    gitrebase = false,
+    hgcommit = false,
+    svn = false,
+    cvs = false,
+    ["."] = false,
+  },
+  copilot_node_command = 'node', -- Node.js version must be > 16.x
+  server_opts_overrides = {},
+})
+require'nvim-treesitter.configs'.setup {
+  -- A list of parser names, or "all" (the five listed parsers should always be installed)
+  ensure_installed = { "python", "svelte", "typescript", "javascript", "rust", "go" },
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  -- Automatically install missing parsers when entering buffer
+  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+  auto_install = true,
+
+  -- List of parsers to ignore installing (for "all")
+  ignore_install = { },
+
+  ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
+  -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
+
+  highlight = {
+    enable = true,
+
+    -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
+    -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
+    -- the name of the parser)
+    -- list of language that will be disabled
+    disable = { "" },
+
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+  indent = {
+    enable = true,
+  },
+}
 EOF

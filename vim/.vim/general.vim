@@ -39,6 +39,7 @@ set cmdheight=2
 set shell=/bin/bash
 set regexpengine=0
 set updatetime=100
+set termguicolors
 
 " Color characters exceeding 120 characters
 if exists('+colorcolumn')
