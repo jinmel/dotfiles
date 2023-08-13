@@ -108,7 +108,7 @@ require('lualine').setup {
 }
 require('alpha').setup(require'alpha.themes.startify'.config)
 require('nvim-surround').setup()
-require('auto-session')
+require('auto-session').setup()
 require('aerial').setup {
   on_attach = function(bufnr)
     -- Jump forwards/backwards with '{' and '}'
