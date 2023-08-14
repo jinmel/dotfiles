@@ -30,7 +30,7 @@
   " }}}
   " Completion {{{
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'zbirenbaum/copilot.lua'
+    Plug 'github/copilot.vim'
   " }}}
   " Fuzzy Finder {{{
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
@@ -119,49 +119,6 @@ require('aerial').setup {
 require('Comment').setup()
 require('colorizer').setup()
 require("nvim-tree").setup()
-require('copilot').setup({
-  panel = {
-    enabled = true,
-    auto_refresh = false,
-    keymap = {
-      jump_prev = "[[",
-      jump_next = "]]",
-      accept = "<CR>",
-      refresh = "gr",
-      open = "<M-CR>"
-    },
-    layout = {
-      position = "bottom", -- | top | left | right
-      ratio = 0.4
-    },
-  },
-  suggestion = {
-    enabled = true,
-    auto_trigger = true,
-    debounce = 75,
-    keymap = {
-      accept = "<M-l>",
-      accept_word = false,
-      accept_line = false,
-      next = "<M-]>",
-      prev = "<M-[>",
-      dismiss = "<C-]>",
-    },
-  },
-  filetypes = {
-    yaml = false,
-    markdown = false,
-    help = false,
-    gitcommit = true,
-    gitrebase = false,
-    hgcommit = false,
-    svn = false,
-    cvs = false,
-    ["."] = false,
-  },
-  copilot_node_command = 'node', -- Node.js version must be > 16.x
-  server_opts_overrides = {},
-})
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "python", "svelte", "typescript", "javascript", "rust", "go" },

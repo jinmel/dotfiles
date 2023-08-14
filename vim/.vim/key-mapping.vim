@@ -34,7 +34,7 @@ nmap <Leader>t :tabnew<CR>
 nnoremap <tab> :Telescope buffers<CR>
 nnoremap <C-p> :Telescope find_files<CR>
 nnoremap g<C-p> :Telescope git_files<CR>
-nnoremap <s-tab> :Telescope treesitter<CR>
+nnoremap <s-tab> :Telescope live_grep<CR>
 
 "clang-format
 autocmd FileType c,cpp,objc nnoremap <buffer>gf :ClangFormat<CR>

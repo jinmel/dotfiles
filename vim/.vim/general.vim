@@ -1,3 +1,5 @@
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
 set secure
 set nomodeline
 set nocompatible
@@ -13,10 +15,8 @@ filetype plugin indent on
 
 set encoding=utf-8
 set fileencodings=utf-8
-set tags=TAGS
 set autoindent
 set smartindent
-set cindent
 set expandtab
 set smarttab
 set shiftwidth=2
@@ -35,8 +35,7 @@ set nobackup
 set number
 set linespace=3
 set hidden
-set cmdheight=2
-set shell=/bin/bash
+set cmdheight=1
 set regexpengine=0
 set updatetime=100
 set termguicolors
