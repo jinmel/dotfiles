@@ -1,4 +1,4 @@
-Xft.dpi: 96
+Xft.dpi: 192
 URxvt.font: xft:InconsolataForPowerline Nerd Font:pixelsize=16:antialias=false:hinting=true
 URxvt*scrollWithBuffer:  false
 URxvt*scrollBar:  false

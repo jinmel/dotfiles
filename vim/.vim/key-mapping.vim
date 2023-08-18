@@ -31,10 +31,14 @@ nmap <Leader>r :redraw!<CR>
 nmap <Leader>t :tabnew<CR>
 
 "telescope
-nnoremap <tab> :Telescope buffers<CR>
-nnoremap <C-p> :Telescope find_files<CR>
-nnoremap g<C-p> :Telescope git_files<CR>
-nnoremap <s-tab> :Telescope live_grep<CR>
+" nnoremap <tab> :Telescope buffers<CR>
+" nnoremap <C-p> :Telescope find_files<CR>
+" nnoremap g<C-p> :Telescope git_files<CR>
+" nnoremap <s-tab> :Telescope live_grep<CR>
+nnoremap <tab> :Buffers<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap g<C-p> :GFiles<CR>
+nnoremap <s-tab> :Rg<CR>
 
 "clang-format
 autocmd FileType c,cpp,objc nnoremap <buffer>gf :ClangFormat<CR>

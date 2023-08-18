@@ -2,15 +2,30 @@
 export ZSH=~/.oh-my-zsh
 export ZSH_PLUGINS=$HOME/.zsh-plugins
 export EDITOR=nvim
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
+# auto completion
+autoload -Uz compinit
+compinit
+
+# pyenv
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
+# eval "$(pyenv virtualenv-init -)"
 
 # Aliases
 alias tmux="TERM=screen-256color tmux"
 alias vim="nvim"
+
+# nvm
+zstyle ':omz:plugins:nvm' lazy yes
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="ys"
+# ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,7 +69,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pyenv)
+plugins=(git pyenv docker fzf starship nvm npm asdf thefuck zoxide)
 
 # Enable oh my zsh
 source $ZSH/oh-my-zsh.sh
@@ -86,29 +101,8 @@ function title() {
 
 }
 
-# fzf key binding
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# Setting fd as the default source for fzf
-export FZF_DEFAULT_COMMAND='fd --type f'
-
-# To apply the command to CTRL-T as well
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
 # zsh autosuggestion
-
 source $ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# nvm
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
 
 # User configuration
 if [ -r ~/.zshrc.user ]; then
