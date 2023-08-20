@@ -33,9 +33,9 @@
     Plug 'github/copilot.vim'
   " }}}
   " Fuzzy Finder {{{
-    " Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
-    Plug 'junegunn/fzf.vim'
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+    " Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
+    " Plug 'junegunn/fzf.vim'
   " }}}
   " Highlighting {{{
     Plug 'norcalli/nvim-colorizer.lua'
@@ -155,4 +155,5 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
   },
 }
+require('telescope').setup()
 EOF

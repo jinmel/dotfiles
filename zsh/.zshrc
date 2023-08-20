@@ -1,10 +1,15 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-export ZSH_PLUGINS=$HOME/.zsh-plugins
 export EDITOR=nvim
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+export PAGER=bat
 
-# auto completion
+# You may need to manually set your language environment
+export LANGUAGE=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# zsh-completions
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 autoload -Uz compinit
 compinit
 
@@ -69,15 +74,10 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pyenv docker fzf starship nvm npm asdf thefuck zoxide)
+plugins=(git pyenv docker fzf starship nvm npm asdf thefuck zoxide zsh-autosuggestions zsh-syntax-highlighting)
 
 # Enable oh my zsh
 source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-export LANGUAGE=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
 
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
@@ -100,9 +100,6 @@ function title() {
     esac
 
 }
-
-# zsh autosuggestion
-source $ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
 if [ -r ~/.zshrc.user ]; then
