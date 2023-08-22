@@ -10,14 +10,11 @@ export LC_ALL=en_US.UTF-8
 
 # zsh-completions
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
-autoload -Uz compinit
-compinit
 
 # pyenv
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init --path)"
-# eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
 # Aliases
 alias tmux="TERM=screen-256color tmux"
@@ -25,6 +22,7 @@ alias vim="nvim"
 
 # nvm
 zstyle ':omz:plugins:nvm' lazy yes
+zstyle ':omz:plugins:nvm' lazy-cmd vim nvim npm
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
