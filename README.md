@@ -4,8 +4,6 @@
 2. tmux
 3. zsh
 4. X (mostly urxvt colors)
-5. gdb with gef
-6. Linuxbrew
 
 ## Installation
 
