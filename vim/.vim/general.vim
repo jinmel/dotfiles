@@ -5,12 +5,12 @@ set nomodeline
 set nocompatible
 set linebreak
 set number
-syntax on
 set mouse=a
 set backspace=indent,eol,start
 set foldmethod=marker
 set foldlevelstart=1
 
+syntax enable
 filetype plugin indent on
 
 set encoding=utf-8

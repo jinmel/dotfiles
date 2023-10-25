@@ -5,3 +5,4 @@ let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver', 'coc-s
 let g:copilot_filetypes = { 'gitcommit': v:true  }
 " }}}
 
+let g:go_fmt_command = "gofmt"

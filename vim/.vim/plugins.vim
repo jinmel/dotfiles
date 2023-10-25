@@ -31,6 +31,7 @@
   " Completion {{{
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'github/copilot.vim'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   " }}}
   " Fuzzy Finder {{{
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
@@ -39,6 +40,7 @@
   " }}}
   " Highlighting {{{
     Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'iden3/vim-circom-syntax'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   " }}}
   " Themes {{{

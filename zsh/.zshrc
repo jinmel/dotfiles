@@ -99,7 +99,4 @@ function title() {
 
 }
 
-# User configuration
-if [ -r ~/.zshrc.user ]; then
-  source ~/.zshrc.user
-fi
+alias ls="exa --icons"
