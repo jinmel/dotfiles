@@ -100,3 +100,4 @@ function title() {
 }
 
 alias ls="exa --icons"
+export BAT_THEME="Catppuccin-mocha"

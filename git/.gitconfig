@@ -14,10 +14,7 @@
 	excludesfile = ~/.gitignore
 [difftool]
 	prompt = false
+[init]
+  defaultBranch = main
 [include]
 	path = ~/.gitconfig.user
-[init]
-	defaultBranch = main
-[user]
-	name = Jinsuk Park
-	email = totorovirus@gmail.com
