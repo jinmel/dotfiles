@@ -27,9 +27,11 @@
   " Utility {{{
     Plug 'goolord/alpha-nvim'
     Plug 'folke/noice.nvim'
+    Plug 'folke/flash.nvim'
     Plug 'stevearc/aerial.nvim'
     Plug 'rmagatti/auto-session'
     Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
+    Plug 'ellisonleao/glow.nvim'
   " }}}
   " Completion {{{
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -50,9 +52,6 @@
     Plug 'glepnir/zephyr-nvim'
     Plug 'folke/tokyonight.nvim'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-  " }}}
-  " Languages {{{
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   " }}}
   call plug#end()
 " }}}
@@ -166,6 +165,8 @@ require'nvim-treesitter.configs'.setup {
 }
 require('noice').setup()
 require('trouble').setup()
+require('flash').setup()
+require('glow').setup()
 -- require('telescope').setup({
 --   defaults = {
 --     mappings = {
