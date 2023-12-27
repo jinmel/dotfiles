@@ -21,8 +21,8 @@
   " VCS {{{
     Plug 'tpope/vim-fugitive'
     Plug 'lewis6991/gitsigns.nvim'
-    Plug 'NeogitOrg/neogit'
     Plug 'sindrets/diffview.nvim'
+    Plug 'akinsho/git-conflict.nvim'
   " }}}
   " Utility {{{
     Plug 'goolord/alpha-nvim'
@@ -32,6 +32,7 @@
     Plug 'rmagatti/auto-session'
     Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
     Plug 'ellisonleao/glow.nvim'
+    Plug 'yamatsum/nvim-cursorline'
   " }}}
   " Completion {{{
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -99,7 +100,6 @@ require('gitsigns').setup{
     map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
   end
 }
-require("neogit").setup()
 require('lualine').setup {
   options = {
     theme = 'tokyonight'
@@ -167,6 +167,8 @@ require('noice').setup()
 require('trouble').setup()
 require('flash').setup()
 require('glow').setup()
+require('nvim-cursorline').setup()
+require('git-conflict').setup()
 -- require('telescope').setup({
 --   defaults = {
 --     mappings = {
