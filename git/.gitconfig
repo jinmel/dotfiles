@@ -1,5 +1,5 @@
 [push]
-	default = matching
+	default = upstream
 [credential]
     helper = cache
 [filter "lfs"]

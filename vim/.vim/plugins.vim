@@ -2,10 +2,12 @@
   call plug#begin()
   " Deps {{{
     Plug 'nvim-lua/plenary.nvim'
+    Plug 'MunifTanjim/nui.nvim'
   " }}}
   " File browser tree {{{
     Plug 'nvim-tree/nvim-web-devicons'
     Plug 'nvim-tree/nvim-tree.lua'
+  " }}}
   " Statusline {{{
     Plug 'nvim-lualine/lualine.nvim'
   " }}}
@@ -13,8 +15,8 @@
     Plug 'numToStr/Comment.nvim'
     Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'kylechui/nvim-surround'
-    " }}}
     Plug 'windwp/nvim-autopairs'
+    Plug 'folke/trouble.nvim'
   " }}}
   " VCS {{{
     Plug 'tpope/vim-fugitive'
@@ -24,6 +26,7 @@
   " }}}
   " Utility {{{
     Plug 'goolord/alpha-nvim'
+    Plug 'folke/noice.nvim'
     Plug 'stevearc/aerial.nvim'
     Plug 'rmagatti/auto-session'
     Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
@@ -34,9 +37,9 @@
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   " }}}
   " Fuzzy Finder {{{
-    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
-    " Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
-    " Plug 'junegunn/fzf.vim'
+    " Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
+    Plug 'junegunn/fzf.vim'
   " }}}
   " Highlighting {{{
     Plug 'norcalli/nvim-colorizer.lua'
@@ -46,6 +49,10 @@
   " Themes {{{
     Plug 'glepnir/zephyr-nvim'
     Plug 'folke/tokyonight.nvim'
+    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+  " }}}
+  " Languages {{{
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   " }}}
   call plug#end()
 " }}}
@@ -157,5 +164,17 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
   },
 }
-require('telescope').setup()
+require('noice').setup()
+require('trouble').setup()
+-- require('telescope').setup({
+--   defaults = {
+--     mappings = {
+--       i = {
+--         ["<esc>"] = require('telescope.actions').close,
+--         ["<C-Down>"] = require('telescope.actions').cycle_history_next,
+--         ["<C-Up>"] = require('telescope.actions').cycle_history_prev,
+--       },
+--     },
+--   },
+-- })
 EOF

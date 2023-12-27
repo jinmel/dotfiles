@@ -22,7 +22,7 @@ alias vim="nvim"
 
 # nvm
 zstyle ':omz:plugins:nvm' lazy yes
-zstyle ':omz:plugins:nvm' lazy-cmd vim nvim npm
+zstyle ':omz:plugins:nvm' lazy-cmd vim nvim
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -72,7 +72,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pyenv docker fzf starship nvm npm asdf thefuck zoxide zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git pyenv docker fzf starship nvm npm asdf thefuck zoxide zsh-autosuggestions zsh-syntax-highlighting archlinux)
 
 # Enable oh my zsh
 source $ZSH/oh-my-zsh.sh
