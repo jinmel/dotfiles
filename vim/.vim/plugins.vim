@@ -112,7 +112,15 @@ require('lualine').setup {
     lualine_y = {},
     lualine_z = {'tabs'}
   },
-  extensions = {'fzf', 'neo-tree', 'fugitive'}
+  extensions = {'fzf', 'neo-tree', 'fugitive'},
+  sections = {
+    lualine_a = {
+      {
+          'filename',
+          path = 1,
+      }
+    },
+  }
 }
 require('alpha').setup(require'alpha.themes.startify'.config)
 require('nvim-surround').setup()
