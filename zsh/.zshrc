@@ -99,5 +99,5 @@ function title() {
 
 }
 
-alias ls="exa --icons"
+alias ls="eza --icons"
 export BAT_THEME="Catppuccin-mocha"
