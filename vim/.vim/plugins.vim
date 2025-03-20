@@ -32,7 +32,6 @@
     Plug 'rmagatti/auto-session'
     Plug 'christoomey/vim-tmux-navigator' " tmuxify vim switch pane behavior
     Plug 'ellisonleao/glow.nvim'
-    Plug 'yamatsum/nvim-cursorline'
   " }}}
   " Completion {{{
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -175,8 +174,8 @@ require('noice').setup()
 require('trouble').setup()
 require('flash').setup()
 require('glow').setup()
-require('nvim-cursorline').setup()
 require('git-conflict').setup()
+require('ibl').setup()
 -- require('telescope').setup({
 --   defaults = {
 --     mappings = {
