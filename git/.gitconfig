@@ -18,3 +18,5 @@
   defaultBranch = main
 [include]
 	path = ~/.gitconfig.user
+[color]
+	ui = auto
