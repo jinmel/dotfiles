@@ -3,6 +3,7 @@
   " Deps {{{
     Plug 'nvim-lua/plenary.nvim'
     Plug 'MunifTanjim/nui.nvim'
+    Plug 'rcarriga/nvim-notify'
   " }}}
   " File browser tree {{{
     Plug 'nvim-tree/nvim-web-devicons'
