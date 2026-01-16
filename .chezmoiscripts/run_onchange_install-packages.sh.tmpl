@@ -11,7 +11,7 @@ if ! command -v brew &> /dev/null; then
     eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null || /usr/local/bin/brew shellenv)"
 fi
 
-PACKAGES=(eza broot zoxide starship bat fzf neovim tmux git ripgrep fd k9s asdf dust duf httpie uv direnv)
+PACKAGES=(eza broot zoxide starship bat fzf neovim tmux git ripgrep fd k9s asdf dust duf httpie uv direnv zsh)
 
 for pkg in "${PACKAGES[@]}"; do
     if ! brew list "$pkg" &>/dev/null; then
@@ -28,7 +28,7 @@ echo "Package installation complete!"
 echo "Installing packages via pacman (Arch Linux)..."
 
 # Official repo packages
-PACKAGES=(eza zoxide bat fzf neovim tmux git ripgrep fd dust duf httpie uv direnv)
+PACKAGES=(eza zoxide bat fzf neovim tmux git ripgrep fd dust duf httpie uv direnv zsh)
 
 sudo pacman -S --needed --noconfirm "${PACKAGES[@]}"
 
@@ -61,7 +61,7 @@ echo "Installing packages via apt (Ubuntu)..."
 sudo apt update
 
 # Packages available in apt
-APT_PACKAGES=(bat fzf neovim tmux git ripgrep fd-find duf httpie direnv)
+APT_PACKAGES=(bat fzf neovim tmux git ripgrep fd-find duf httpie direnv zsh)
 
 sudo apt install -y "${APT_PACKAGES[@]}"
 
