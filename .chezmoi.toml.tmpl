@@ -2,6 +2,7 @@
 {{- $email := promptStringOnce . "email" "Git email address" -}}
 {{- $installRust := promptBoolOnce . "installRust" "Install Rust (rustup)" -}}
 {{- $installFoundry := promptBoolOnce . "installFoundry" "Install Foundry (foundryup)" -}}
+{{- $installClaudeCode := promptBoolOnce . "installClaudeCode" "Install Claude Code" -}}
 {{- $installAsdfPlugins := promptBoolOnce . "installAsdfPlugins" "Install asdf plugins (golang, python, nodejs)" -}}
 
 [data]
@@ -9,6 +10,7 @@
     email = {{ $email | quote }}
     installRust = {{ $installRust }}
     installFoundry = {{ $installFoundry }}
+    installClaudeCode = {{ $installClaudeCode }}
     installAsdfPlugins = {{ $installAsdfPlugins }}
 
 [git]

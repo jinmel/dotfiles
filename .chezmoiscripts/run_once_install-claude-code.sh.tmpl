@@ -1,0 +1,13 @@
+#!/bin/bash
+# Install Claude Code
+{{- if not .installClaudeCode }}
+# Skipping Claude Code installation (user opted out)
+exit 0
+{{- end }}
+
+if ! command -v claude &> /dev/null; then
+    echo "Installing Claude Code..."
+    curl -fsSL https://claude.ai/install.sh | bash
+else
+    echo "Claude Code already installed"
+fi
