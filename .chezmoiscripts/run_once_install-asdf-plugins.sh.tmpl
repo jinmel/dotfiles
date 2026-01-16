@@ -1,0 +1,27 @@
+#!/bin/bash
+# Install asdf plugins (golang, python, nodejs)
+{{- if not .installAsdfPlugins }}
+# Skipping asdf plugins installation (user opted out)
+exit 0
+{{- end }}
+
+# Ensure asdf is available
+if ! command -v asdf &> /dev/null; then
+    echo "asdf not found, skipping plugin installation"
+    exit 0
+fi
+
+echo "Installing asdf plugins..."
+
+PLUGINS=(golang python nodejs)
+
+for plugin in "${PLUGINS[@]}"; do
+    if ! asdf plugin list | grep -q "^${plugin}$"; then
+        echo "Adding asdf plugin: $plugin"
+        asdf plugin add "$plugin"
+    else
+        echo "asdf plugin already installed: $plugin"
+    fi
+done
+
+echo "asdf plugins installation complete!"

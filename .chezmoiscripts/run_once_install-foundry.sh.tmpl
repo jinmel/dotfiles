@@ -1,0 +1,15 @@
+#!/bin/bash
+# Install Foundry (foundryup)
+{{- if not .installFoundry }}
+# Skipping Foundry installation (user opted out)
+exit 0
+{{- end }}
+
+if ! command -v foundryup &> /dev/null; then
+    echo "Installing foundryup..."
+    curl -L https://foundry.paradigm.xyz | bash
+    export PATH="$HOME/.foundry/bin:$PATH"
+    foundryup
+else
+    echo "foundryup already installed"
+fi

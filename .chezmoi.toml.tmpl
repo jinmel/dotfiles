@@ -1,9 +1,15 @@
 {{- $name := promptStringOnce . "name" "Git user name" -}}
 {{- $email := promptStringOnce . "email" "Git email address" -}}
+{{- $installRust := promptBoolOnce . "installRust" "Install Rust (rustup)" -}}
+{{- $installFoundry := promptBoolOnce . "installFoundry" "Install Foundry (foundryup)" -}}
+{{- $installAsdfPlugins := promptBoolOnce . "installAsdfPlugins" "Install asdf plugins (golang, python, nodejs)" -}}
 
 [data]
     name = {{ $name | quote }}
     email = {{ $email | quote }}
+    installRust = {{ $installRust }}
+    installFoundry = {{ $installFoundry }}
+    installAsdfPlugins = {{ $installAsdfPlugins }}
 
 [git]
     autoCommit = true
