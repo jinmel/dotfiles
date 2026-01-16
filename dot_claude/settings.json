@@ -4,12 +4,12 @@
       "Bash(git:*)",
       "Bash(gh:*)",
       "Bash(cargo:*)",
-      "WebSearch",
       "Bash(ls:*)",
       "Bash(rustc:*)",
       "Bash(npm:*)",
       "Bash(yarn:*)",
       "Bash(npx:*)",
+      "WebSearch",
       "mcp__serena__*"
     ]
   },
@@ -19,6 +19,11 @@
     "frontend-design@claude-plugins-official": true
   },
   "mcpServers": {
+    "ccusage": {
+      "command": "npx",
+      "args": ["@ccusage/mcp@latest"],
+      "env": {}
+    },
     "serena": {
       "type": "stdio",
       "command": "uvx",
