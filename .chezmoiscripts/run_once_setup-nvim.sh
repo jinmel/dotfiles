@@ -1,6 +1,5 @@
 #!/bin/bash
 # Install vim-plug for neovim
-# hash: {{ include ".chezmoiscripts/run_onchange_setup-nvim.sh.tmpl" | sha256sum }}
 
 if [ ! -f "$HOME/.config/nvim/autoload/plug.vim" ]; then
     echo "Installing vim-plug..."
