@@ -1,9 +1,0 @@
-# pyenv configuration
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-command -v pyenv &>/dev/null && eval "$(pyenv init --path)"
-
-{{- if eq .chezmoi.os "darwin" }}
-# Homebrew (needed early for PATH)
-eval "$(/opt/homebrew/bin/brew shellenv)"
-{{- end }}
