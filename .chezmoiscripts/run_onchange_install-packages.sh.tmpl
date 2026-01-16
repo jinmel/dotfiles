@@ -1,11 +1,10 @@
 #!/bin/bash
-# Install required packages via Homebrew (macOS)
+# Install required packages
 # hash: {{ include ".chezmoiscripts/run_onchange_install-packages.sh.tmpl" | sha256sum }}
 
 {{ if eq .chezmoi.os "darwin" -}}
 echo "Installing packages via Homebrew..."
 
-# Check if Homebrew is installed
 if ! command -v brew &> /dev/null; then
     echo "Homebrew not found. Installing..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -22,4 +21,114 @@ for pkg in "${PACKAGES[@]}"; do
 done
 
 echo "Package installation complete!"
+{{ end -}}
+
+{{ if eq .chezmoi.os "linux" -}}
+{{ if eq .chezmoi.osRelease.id "arch" -}}
+echo "Installing packages via pacman (Arch Linux)..."
+
+# Official repo packages
+PACKAGES=(eza zoxide bat fzf neovim tmux git ripgrep fd dust duf httpie)
+
+sudo pacman -S --needed --noconfirm "${PACKAGES[@]}"
+
+# AUR packages (requires yay or paru)
+if command -v yay &> /dev/null; then
+    AUR_HELPER="yay"
+elif command -v paru &> /dev/null; then
+    AUR_HELPER="paru"
+else
+    echo "Warning: No AUR helper found. Install yay or paru for: broot, starship, k9s, asdf-vm"
+    AUR_HELPER=""
+fi
+
+if [ -n "$AUR_HELPER" ]; then
+    AUR_PACKAGES=(broot starship k9s asdf-vm)
+    for pkg in "${AUR_PACKAGES[@]}"; do
+        if ! pacman -Qi "$pkg" &>/dev/null; then
+            echo "Installing $pkg from AUR..."
+            $AUR_HELPER -S --needed --noconfirm "$pkg" || echo "Warning: Failed to install $pkg"
+        fi
+    done
+fi
+
+echo "Package installation complete!"
+{{ end -}}
+
+{{ if eq .chezmoi.osRelease.id "ubuntu" -}}
+echo "Installing packages via apt (Ubuntu)..."
+
+sudo apt update
+
+# Packages available in apt
+APT_PACKAGES=(bat fzf neovim tmux git ripgrep fd-find duf httpie)
+
+sudo apt install -y "${APT_PACKAGES[@]}"
+
+# Create fd symlink (Ubuntu uses fd-find)
+if [ ! -L /usr/local/bin/fd ] && [ -f /usr/bin/fdfind ]; then
+    sudo ln -sf /usr/bin/fdfind /usr/local/bin/fd
+fi
+
+# Create bat symlink (Ubuntu uses batcat)
+if [ ! -L /usr/local/bin/bat ] && [ -f /usr/bin/batcat ]; then
+    sudo ln -sf /usr/bin/batcat /usr/local/bin/bat
+fi
+
+# Install eza (from official repo on 24.04+, or binary)
+if ! command -v eza &> /dev/null; then
+    echo "Installing eza..."
+    sudo apt install -y eza 2>/dev/null || {
+        sudo mkdir -p /etc/apt/keyrings
+        wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+        echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+        sudo apt update
+        sudo apt install -y eza
+    }
+fi
+
+# Install zoxide
+if ! command -v zoxide &> /dev/null; then
+    echo "Installing zoxide..."
+    curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+fi
+
+# Install starship
+if ! command -v starship &> /dev/null; then
+    echo "Installing starship..."
+    curl -sS https://starship.rs/install.sh | sh -s -- -y
+fi
+
+# Install broot
+if ! command -v broot &> /dev/null; then
+    echo "Installing broot..."
+    curl -o /tmp/broot -L https://dystroy.org/broot/download/x86_64-linux/broot
+    chmod +x /tmp/broot
+    sudo mv /tmp/broot /usr/local/bin/
+fi
+
+# Install dust
+if ! command -v dust &> /dev/null; then
+    echo "Installing dust..."
+    DUST_VERSION=$(curl -s https://api.github.com/repos/bootandy/dust/releases/latest | grep tag_name | cut -d '"' -f 4)
+    curl -L "https://github.com/bootandy/dust/releases/download/${DUST_VERSION}/dust-${DUST_VERSION}-x86_64-unknown-linux-gnu.tar.gz" | tar xz -C /tmp
+    sudo mv /tmp/dust-${DUST_VERSION}-x86_64-unknown-linux-gnu/dust /usr/local/bin/
+fi
+
+# Install k9s
+if ! command -v k9s &> /dev/null; then
+    echo "Installing k9s..."
+    K9S_VERSION=$(curl -s https://api.github.com/repos/derailed/k9s/releases/latest | grep tag_name | cut -d '"' -f 4)
+    curl -L "https://github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_Linux_amd64.tar.gz" | tar xz -C /tmp
+    sudo mv /tmp/k9s /usr/local/bin/
+fi
+
+# Install asdf
+if [ ! -d "$HOME/.asdf" ]; then
+    echo "Installing asdf..."
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+fi
+
+echo "Package installation complete!"
+{{ end -}}
 {{ end -}}
