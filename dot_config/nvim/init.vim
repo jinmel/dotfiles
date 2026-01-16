@@ -6,3 +6,6 @@ source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/plugins-config.vim
 source ~/.config/nvim/key-mapping.vim
 source ~/.config/nvim/theme.vim
+
+" Load LSP configuration
+lua require('lsp')
