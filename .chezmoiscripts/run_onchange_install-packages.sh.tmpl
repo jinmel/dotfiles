@@ -65,15 +65,7 @@ APT_PACKAGES=(bat fzf neovim tmux git ripgrep fd-find duf httpie)
 
 sudo apt install -y "${APT_PACKAGES[@]}"
 
-# Create fd symlink (Ubuntu uses fd-find)
-if [ ! -L /usr/local/bin/fd ] && [ -f /usr/bin/fdfind ]; then
-    sudo ln -sf /usr/bin/fdfind /usr/local/bin/fd
-fi
-
-# Create bat symlink (Ubuntu uses batcat)
-if [ ! -L /usr/local/bin/bat ] && [ -f /usr/bin/batcat ]; then
-    sudo ln -sf /usr/bin/batcat /usr/local/bin/bat
-fi
+# Note: fd-find and batcat are aliased in .zshrc as fd and bat
 
 # Install eza (from official repo on 24.04+, or binary)
 if ! command -v eza &> /dev/null; then

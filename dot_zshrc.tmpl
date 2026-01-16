@@ -11,6 +11,11 @@ export LC_ALL=en_US.UTF-8
 # Aliases
 alias tmux="TERM=screen-256color tmux"
 alias vim="nvim"
+{{- if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "ubuntu") }}
+# Ubuntu package name aliases
+alias fd="fdfind"
+alias bat="batcat"
+{{- end }}
 
 # nvm
 zstyle ':omz:plugins:nvm' lazy yes
@@ -94,8 +99,10 @@ function title() {
 alias ls="eza --icons"
 export BAT_THEME="Catppuccin-mocha"
 
+{{- if eq .chezmoi.os "darwin" }}
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+{{- end }}
 
 # broot
 [[ -f $HOME/.config/broot/launcher/bash/br ]] && source $HOME/.config/broot/launcher/bash/br
