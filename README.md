@@ -23,6 +23,7 @@ chezmoi init --apply jinmel
 | [fzf](https://github.com/junegunn/fzf) | Fuzzy finder |
 | [git](https://github.com/git/git) | Version control |
 | [httpie](https://github.com/httpie/cli) | HTTP client |
+| [jq](https://github.com/jqlang/jq) | JSON processor |
 | [k9s](https://github.com/derailed/k9s) | Kubernetes CLI manager |
 | [neovim](https://github.com/neovim/neovim) | Text editor |
 | [ripgrep](https://github.com/BurntSushi/ripgrep) | Fast grep alternative |
