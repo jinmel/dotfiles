@@ -1,6 +1,12 @@
 {{- $name := promptStringOnce . "name" "Git user name" -}}
 {{- $email := promptStringOnce . "email" "Git email address" -}}
 
+encryption = "gpg"
+
 [data]
     name = {{ $name | quote }}
     email = {{ $email | quote }}
+
+[gpg]
+    recipient = "277B0BE9196E8C36DBE80C55C48666192DF783B4"
+    args = ["--batch", "--trust-model", "always"]
