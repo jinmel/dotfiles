@@ -1,0 +1,4 @@
+# Ignore Xresources on macOS (only needed on Linux)
+{{ if eq .chezmoi.os "darwin" }}
+.Xresources
+{{ end }}

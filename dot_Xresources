@@ -1,0 +1,63 @@
+Xft.dpi: 192
+URxvt.font: xft:InconsolataForPowerline Nerd Font:pixelsize=16:antialias=false:hinting=true
+URxvt*scrollWithBuffer:  false
+URxvt*scrollBar:  false
+URxvt*skipScroll: true
+URxvt*cursorBlink: false
+
+! --- special colors ---
+!
+URxvt*highlightColor: #44475A
+URxvt*colorBD: #FFFFFF
+*background: #282a36
+*foreground: #f8f8f2
+!
+! ! --- standard colors ---
+!
+! ! black
+*color0: #000000
+!
+! ! bright_black
+*color8: #555555
+!
+! ! red
+*color1: #ff5555
+!
+! ! bright_red
+*color9: #ff5555
+!
+! ! green
+*color2: #50fa7b
+!
+! ! bright_green
+*color10: #50fa7b
+!
+! ! yellow
+*color3: #F1FA8C
+!
+! ! bright_yellow
+*color11: #F1FA8C
+!
+! ! blue
+*color4: #BD93F9
+!
+! ! bright_blue
+*color12: #BD93F9
+!
+! ! magenta
+*color5: #FF79C6
+!
+! ! bright_magenta
+*color13: #FF79C6
+!
+! ! cyan
+*color6: #8BE9FD
+!
+! ! bright_cyan
+*color14: #8BE9FD
+!
+! ! white
+*color7: #BBBBBB
+!
+! ! bright_white
+*color15: #FFFFFF
