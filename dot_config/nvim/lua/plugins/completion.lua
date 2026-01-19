@@ -98,7 +98,10 @@ return {
           },
         },
         panel = { enabled = false },
-        filetypes = { gitcommit = true, ["*"] = true },
+        filetypes = {
+          gitcommit = true,
+          ["*"] = true,
+        },
       })
     end,
   },
