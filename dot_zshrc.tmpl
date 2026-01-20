@@ -121,3 +121,8 @@ export BAT_THEME="Catppuccin-mocha"
 # Rust/Cargo
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
 {{- end }}
+
+{{- if .installFoundry }}
+# Foundry
+[[ -d "$HOME/.foundry/bin" ]] && export PATH="$HOME/.foundry/bin:$PATH"
+{{- end }}
