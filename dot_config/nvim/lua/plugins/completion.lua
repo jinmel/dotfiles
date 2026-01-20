@@ -31,7 +31,10 @@ return {
         },
         mapping = cmp.mapping.preset.insert({
           ["<Tab>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
+            local copilot = require("copilot.suggestion")
+            if copilot.is_visible() then
+              copilot.accept()
+            elseif cmp.visible() then
               cmp.select_next_item()
             elseif luasnip.expand_or_jumpable() then
               luasnip.expand_or_jump()
@@ -50,7 +53,7 @@ return {
               fallback()
             end
           end, { "i", "s" }),
-          ["<C-Space>"] = cmp.mapping.complete(),
+          ["<C-,>"] = cmp.mapping.complete(),
           ["<CR>"] = cmp.mapping.confirm({ select = false }),
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
           ["<C-f>"] = cmp.mapping.scroll_docs(4),
@@ -79,9 +82,24 @@ return {
 
   -- Copilot
   {
-    "github/copilot.vim",
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
     config = function()
-      vim.g.copilot_filetypes = { gitcommit = true }
+      require("copilot").setup({
+        suggestion = {
+          enabled = true,
+          auto_trigger = true,
+          keymap = {
+            accept = false, -- We handle this in nvim-cmp Tab mapping
+            next = "<M-]>",
+            prev = "<M-[>",
+            dismiss = "<C-]>",
+          },
+        },
+        panel = { enabled = false },
+        filetypes = { gitcommit = true, ["*"] = true },
+      })
     end,
   },
 

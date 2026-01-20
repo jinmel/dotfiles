@@ -50,6 +50,12 @@ return {
         settings = {
           ["rust-analyzer"] = {
             checkOnSave = { command = "clippy" },
+            procMacro = { enable = true },
+            cargo = { allFeatures = true },
+            completion = {
+              autoimport = { enable = true },
+              postfix = { enable = true },
+            },
           },
         },
       })
