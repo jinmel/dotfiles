@@ -116,3 +116,8 @@ export BAT_THEME="Catppuccin-mocha"
 
 # Local bin
 [[ -f "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
+
+{{- if .installRust }}
+# Rust/Cargo
+[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+{{- end }}
