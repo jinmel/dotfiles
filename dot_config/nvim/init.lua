@@ -13,8 +13,8 @@ end
 vim.opt.runtimepath:prepend(lazypath)
 
 -- Leader key (must be set before lazy)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = "\\"
+vim.g.maplocalleader = "\\"
 
 -- Load configuration
 require("config.options")
