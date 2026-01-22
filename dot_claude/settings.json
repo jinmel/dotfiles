@@ -10,7 +10,8 @@
       "Bash(yarn:*)",
       "Bash(npx:*)",
       "WebSearch",
-      "mcp__serena__*"
+      "mcp__serena__*",
+      "mcp__claude-flow__*"
     ]
   },
   "model": "opus",
