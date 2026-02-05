@@ -115,7 +115,7 @@ export BAT_THEME="Catppuccin-mocha"
 [[ -f ~/.asdf/plugins/golang/set-env.zsh ]] && . ~/.asdf/plugins/golang/set-env.zsh
 
 # Local bin
-[[ -f "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
+[[ -d "$HOME/.local/bin" ]] && export PATH="$HOME/.local/bin:$PATH"
 
 {{- if .installRust }}
 # Rust/Cargo
