@@ -23,10 +23,7 @@ return {
         },
         mapping = cmp.mapping.preset.insert({
           ["<Tab>"] = cmp.mapping(function(fallback)
-            local copilot = require("copilot.suggestion")
-            if copilot.is_visible() then
-              copilot.accept()
-            elseif cmp.visible() then
+            if cmp.visible() then
               cmp.select_next_item()
             elseif has_words_before() then
               cmp.complete()
@@ -61,32 +58,6 @@ return {
             })[entry.source.name]
             return vim_item
           end,
-        },
-      })
-    end,
-  },
-
-  -- Copilot
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({
-        suggestion = {
-          enabled = true,
-          auto_trigger = true,
-          keymap = {
-            accept = false, -- We handle this in nvim-cmp Tab mapping
-            next = "<M-]>",
-            prev = "<M-[>",
-            dismiss = "<C-]>",
-          },
-        },
-        panel = { enabled = false },
-        filetypes = {
-          gitcommit = true,
-          ["*"] = true,
         },
       })
     end,
