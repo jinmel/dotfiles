@@ -9,12 +9,9 @@
       "Bash(npm:*)",
       "Bash(yarn:*)",
       "Bash(npx:*)",
-      "WebSearch",
-      "mcp__serena__*",
-      "mcp__claude-flow__*"
+      "WebSearch"
     ]
   },
-  "model": "opus",
   "enabledPlugins": {
     "context7@claude-plugins-official": true
   },
@@ -24,5 +21,10 @@
   },
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "ccline",
+    "padding": 0
   }
 }
