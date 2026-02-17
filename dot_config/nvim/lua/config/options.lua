@@ -8,8 +8,8 @@ opt.relativenumber = false
 -- Mouse
 opt.mouse = "a"
 
--- Clipboard
-opt.clipboard = "unnamedplus"
+-- Clipboard (use <leader>y to yank to system clipboard)
+-- opt.clipboard = "unnamedplus"
 
 -- Indentation
 opt.autoindent = true
