@@ -26,7 +26,7 @@ return {
         lualine_y = {},
         lualine_z = { "tabs" },
       },
-      extensions = { "fzf", "neo-tree", "fugitive" },
+      extensions = { "fzf", "nvim-tree", "fugitive" },
       sections = {
         lualine_a = {
           { "filename", path = 1 },
@@ -62,7 +62,7 @@ return {
 
   -- Colorizer
   {
-    "norcalli/nvim-colorizer.lua",
+    "NvChad/nvim-colorizer.lua",
     config = true,
   },
 

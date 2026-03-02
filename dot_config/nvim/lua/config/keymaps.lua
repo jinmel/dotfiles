@@ -4,12 +4,6 @@ local map = vim.keymap.set
 -- Clear search highlighting
 map("n", "<Space>x", ":let @/=''<CR>", { desc = "Clear search" })
 
--- Split navigation (handled by vim-tmux-navigator plugin)
-map("n", "<C-h>", "<C-w>h", { desc = "Move to left split" })
-map("n", "<C-j>", "<C-w>j", { desc = "Move to below split" })
-map("n", "<C-k>", "<C-w>k", { desc = "Move to above split" })
-map("n", "<C-l>", "<C-w>l", { desc = "Move to right split" })
-
 -- System clipboard
 map("v", "<Leader>y", '"+y', { desc = "Yank to clipboard" })
 map("v", "<Leader>d", '"+d', { desc = "Delete to clipboard" })
@@ -39,8 +33,8 @@ map("n", "g<C-p>", ":GFiles<CR>", { desc = "FZF Git Files" })
 map("n", "<s-tab>", ":Rg<CR>", { desc = "FZF Ripgrep" })
 
 -- Keep selection after indent
-map("v", ">", "><CR>gv", { desc = "Indent and keep selection" })
-map("v", "<", "<<CR>gv", { desc = "Outdent and keep selection" })
+map("v", ">", ">gv", { desc = "Indent and keep selection" })
+map("v", "<", "<gv", { desc = "Outdent and keep selection" })
 
 -- Git
 map("n", "<leader>gb", ":Git blame<CR>", { desc = "Git blame" })

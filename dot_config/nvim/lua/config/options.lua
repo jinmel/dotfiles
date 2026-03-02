@@ -58,10 +58,6 @@ opt.wildignore = "*.pyc"
 -- Regex engine
 opt.regexpengine = 0
 
--- Disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 -- Security
 opt.secure = true
 opt.modeline = false
