@@ -4,12 +4,10 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
-      local ts = require("nvim-treesitter")
-      ts.setup({
+      require("nvim-treesitter.configs").setup({
         ensure_installed = { "python", "svelte", "typescript", "javascript", "rust", "go", "lua", "vim", "vimdoc" },
+        highlight = { enable = true },
       })
-      -- Enable treesitter highlighting
-      vim.treesitter.language.register("python", "python")
     end,
   },
 
