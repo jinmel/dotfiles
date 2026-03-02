@@ -44,9 +44,10 @@ opt.history = 1000
 opt.updatetime = 100
 opt.backspace = "indent,eol,start"
 
--- Folding
-opt.foldmethod = "marker"
-opt.foldlevelstart = 1
+-- Folding (treesitter-based)
+opt.foldmethod = "expr"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+opt.foldlevelstart = 99
 
 -- Encoding
 opt.encoding = "utf-8"
