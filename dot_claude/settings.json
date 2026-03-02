@@ -1,15 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git:*)",
-      "Bash(gh:*)",
-      "Bash(cargo:*)",
-      "Bash(ls:*)",
-      "Bash(rustc:*)",
-      "Bash(npm:*)",
-      "Bash(yarn:*)",
-      "Bash(npx:*)",
-      "WebSearch"
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(cargo *)",
+      "Bash(ls *)",
+      "Bash(rustc *)",
+      "Bash(npm *)",
+      "Bash(yarn *)",
+      "Bash(npx *)",
+      "Bash(find *)",
+      "WebSearch",
+      "WebFetch"
     ]
   },
   "enabledPlugins": {
