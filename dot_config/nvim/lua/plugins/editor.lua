@@ -46,6 +46,6 @@ return {
   { "ellisonleao/glow.nvim", config = true },
 
   -- FZF
-  { "junegunn/fzf", dir = "~/.fzf" },
+  { "junegunn/fzf" },
   { "junegunn/fzf.vim" },
 }
