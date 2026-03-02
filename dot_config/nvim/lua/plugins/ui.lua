@@ -5,8 +5,12 @@ return {
 
   -- File tree
   {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    "nvim-neo-tree/neo-tree.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
     config = true,
   },
 
@@ -26,7 +30,7 @@ return {
         lualine_y = {},
         lualine_z = { "tabs" },
       },
-      extensions = { "fzf", "nvim-tree", "fugitive" },
+      extensions = { "fzf", "neo-tree", "fugitive" },
       sections = {
         lualine_a = {
           { "filename", path = 1 },

@@ -18,7 +18,7 @@ map("v", "y", "ygv<Esc>", { desc = "Yank and keep cursor" })
 -- Function keys
 map("n", "<F8>", ":AerialToggle!<CR>", { desc = "Toggle Aerial" })
 map("n", "<F9>", ":AerialNavToggle<CR>", { desc = "Toggle Aerial Nav" })
-map("n", "<F10>", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
+map("n", "<F10>", ":Neotree toggle<CR>", { desc = "Toggle Neo-tree" })
 
 -- Redraw screen
 map("n", "<Leader>r", ":redraw!<CR>", { desc = "Redraw screen" })
