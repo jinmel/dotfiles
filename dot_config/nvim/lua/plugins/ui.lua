@@ -62,7 +62,7 @@ return {
 
   -- Colorizer
   {
-    "NvChad/nvim-colorizer.lua",
+    "catgoose/nvim-colorizer.lua",
     config = true,
   },
 
