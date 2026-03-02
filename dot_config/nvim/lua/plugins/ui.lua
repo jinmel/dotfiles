@@ -64,7 +64,7 @@ return {
   {
     "catgoose/nvim-colorizer.lua",
     event = "BufReadPre",
-    config = true,
+    options = { parsers = { css = true, css_fn = true } },
   },
 
   -- Themes
