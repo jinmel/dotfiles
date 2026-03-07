@@ -1,6 +1,8 @@
 {
   "permissions": {
     "allow": [
+      "Bash(jq:*)",
+      "Bash(grep:*)",
       "Bash(git:*)",
       "Bash(gh:*)",
       "Bash(cargo:*)",
