@@ -1,8 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(jq:*)",
       "Bash(grep:*)",
+      "Bash(jq:*)",
       "Bash(git:*)",
       "Bash(gh:*)",
       "Bash(cargo:*)",
@@ -20,15 +20,53 @@
     "context7@claude-plugins-official": true
   },
   "attribution": {
-    "pr": "",
-    "commit": ""
+    "commit": "",
+    "pr": ""
   },
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "model": "opus",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jinsuk/.claude/hooks/rtk-rewrite.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/tmux-bell.sh"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/tmux-bell.sh"
+          }
+        ]
+      }
+    ]
   },
   "statusLine": {
     "type": "command",
     "command": "ccline",
     "padding": 0
-  }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "effortLevel": "high"
 }
