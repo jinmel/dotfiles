@@ -1,7 +1,8 @@
 #!/bin/bash
-# Send bell to the tmux pane where Claude is running
-# $TMUX_PANE is set by tmux and available in the hook's environment
+# Notify tmux pane via bell without terminal flicker.
+# Using tmux send-keys lets tmux handle the bell as a pane alert
+# without the terminal visually rendering it.
 if [ -n "$TMUX_PANE" ]; then
-  # Ring bell in the originating pane (not the active one)
-  printf '\a' > /dev/tty 2>/dev/null
+  tmux send-keys -t "$TMUX_PANE" BEscape 2>/dev/null ||
+    printf '\a' > /dev/tty 2>/dev/null
 fi
