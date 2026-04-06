@@ -46,6 +46,7 @@ return {
       -- Use vim.lsp.config for nvim 0.11+
       vim.lsp.config("ts_ls", { capabilities = capabilities })
       vim.lsp.config("rust_analyzer", {
+        cmd = { "rustup", "run", "nightly", "rust-analyzer" },
         capabilities = capabilities,
         settings = {
           ["rust-analyzer"] = {
