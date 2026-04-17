@@ -5,13 +5,6 @@
 exit 0
 {{- end }}
 
-# Ensure asdf is available (source it if installed via git clone)
-if ! command -v asdf &> /dev/null; then
-    if [ -f "$HOME/.asdf/asdf.sh" ]; then
-        . "$HOME/.asdf/asdf.sh"
-    fi
-fi
-
 if ! command -v asdf &> /dev/null; then
     echo "asdf not found, skipping plugin installation"
     exit 0

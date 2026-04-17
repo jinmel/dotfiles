@@ -114,10 +114,19 @@ if ! command -v k9s &> /dev/null; then
     sudo mv /tmp/k9s /usr/local/bin/
 fi
 
-# Install asdf
-if [ ! -d "$HOME/.asdf" ]; then
+# Install asdf (Go binary, v0.16+)
+if ! command -v asdf &> /dev/null; then
     echo "Installing asdf..."
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+    ASDF_VERSION=$(curl -s https://api.github.com/repos/asdf-vm/asdf/releases/latest | grep tag_name | cut -d '"' -f 4)
+    case "$(uname -m)" in
+        x86_64) ASDF_ARCH="amd64" ;;
+        aarch64|arm64) ASDF_ARCH="arm64" ;;
+        *) echo "Unsupported arch: $(uname -m)"; ASDF_ARCH="" ;;
+    esac
+    if [ -n "$ASDF_ARCH" ]; then
+        curl -L "https://github.com/asdf-vm/asdf/releases/download/${ASDF_VERSION}/asdf-${ASDF_VERSION}-linux-${ASDF_ARCH}.tar.gz" | tar xz -C /tmp
+        sudo mv /tmp/asdf /usr/local/bin/
+    fi
 fi
 
 # Install uv

@@ -76,15 +76,12 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker fzf starship nvm npm thefuck zoxide zsh-autosuggestions direnv zsh-syntax-highlighting)
+plugins=(git docker fzf starship nvm npm asdf thefuck zoxide zsh-autosuggestions direnv zsh-syntax-highlighting)
 
 # Ensure local bin is on PATH before oh-my-zsh sources plugins
-# (zoxide, uv, starship, etc. install here on Linux)
+# (zoxide, uv, starship, asdf shims, etc. install here on Linux)
 [[ -d "$HOME/.local/bin" ]] && export PATH="$HOME/.local/bin:$PATH"
 [[ -d "$HOME/bin" ]] && export PATH="$HOME/bin:$PATH"
-
-# Source asdf (git-cloned v0.14) before oh-my-zsh asdf plugin runs
-[[ -f "$HOME/.asdf/asdf.sh" ]] && . "$HOME/.asdf/asdf.sh"
 
 # Enable oh my zsh
 source $ZSH/oh-my-zsh.sh
