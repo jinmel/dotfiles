@@ -1,6 +1,5 @@
 #!/bin/bash
 # Install required packages
-# hash: {{ include ".chezmoiscripts/run_onchange_install-packages.sh.tmpl" | sha256sum }}
 
 {{ if eq .chezmoi.os "darwin" -}}
 echo "Installing packages via Homebrew..."
