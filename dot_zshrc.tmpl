@@ -81,6 +81,7 @@ plugins=(git docker fzf starship nvm npm asdf thefuck zoxide zsh-autosuggestions
 # Ensure local bin is on PATH before oh-my-zsh sources plugins
 # (zoxide, uv, starship, etc. install here on Linux)
 [[ -d "$HOME/.local/bin" ]] && export PATH="$HOME/.local/bin:$PATH"
+[[ -d "$HOME/bin" ]] && export PATH="$HOME/bin:$PATH"
 
 # Source asdf (git-cloned v0.14) before oh-my-zsh asdf plugin runs
 [[ -f "$HOME/.asdf/asdf.sh" ]] && . "$HOME/.asdf/asdf.sh"
