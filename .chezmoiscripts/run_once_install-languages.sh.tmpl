@@ -1,0 +1,48 @@
+#!/bin/bash
+# Install language runtimes via asdf and tools required by neovim config.
+# Runs after run_once_install-asdf-plugins (alphabetical: 'l' > 'a').
+{{- if not .installAsdfPlugins }}
+# Skipping language installation (asdf plugins disabled)
+exit 0
+{{- end }}
+
+set -e
+
+if ! command -v asdf &> /dev/null; then
+    echo "asdf not found, skipping language installation"
+    exit 0
+fi
+
+install_latest() {
+    local plugin="$1"
+    if ! asdf plugin list 2>/dev/null | grep -q "^${plugin}$"; then
+        echo "asdf plugin '${plugin}' not installed, skipping"
+        return
+    fi
+    if asdf list "$plugin" 2>/dev/null | grep -qE '^\s*\*?\s*[0-9]'; then
+        echo "$plugin already installed, skipping"
+        return
+    fi
+    echo "Installing latest $plugin..."
+    asdf install "$plugin" latest
+    asdf set -u "$plugin" latest
+}
+
+install_latest nodejs
+install_latest golang
+
+# Reshim so node/npm/go are available below
+asdf reshim 2>/dev/null || true
+
+# tree-sitter CLI (required by some nvim-treesitter parsers)
+if ! command -v tree-sitter &> /dev/null; then
+    if command -v npm &> /dev/null; then
+        echo "Installing tree-sitter CLI via npm..."
+        npm install -g tree-sitter-cli
+        asdf reshim nodejs 2>/dev/null || true
+    else
+        echo "npm not available, skipping tree-sitter CLI install"
+    fi
+fi
+
+echo "Language installation complete!"
