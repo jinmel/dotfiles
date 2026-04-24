@@ -17,6 +17,11 @@ return {
       end
 
       cmp.setup({
+        snippet = {
+          expand = function(args)
+            vim.snippet.expand(args.body)
+          end,
+        },
         preselect = cmp.PreselectMode.None,
         completion = {
           completeopt = "menu,menuone,noinsert,noselect",

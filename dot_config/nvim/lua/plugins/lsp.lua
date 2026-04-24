@@ -5,6 +5,7 @@ return {
     "williamboman/mason.nvim",
     config = function()
       require("mason").setup({
+        PATH = "append",
         ui = {
           icons = {
             package_installed = "✓",
@@ -46,6 +47,7 @@ return {
       -- Use vim.lsp.config for nvim 0.11+
       vim.lsp.config("ts_ls", { capabilities = capabilities })
       vim.lsp.config("rust_analyzer", {
+        cmd = { "rust-analyzer" },
         capabilities = capabilities,
         settings = {
           ["rust-analyzer"] = {
