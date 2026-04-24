@@ -1,5 +1,6 @@
 {{- $name := promptStringOnce . "name" "Git user name" -}}
 {{- $email := promptStringOnce . "email" "Git email address" -}}
+{{- $signingkey := promptStringOnce . "signingkey" "Git signing key (empty to skip)" "" -}}
 {{- $installRust := promptBoolOnce . "installRust" "Install Rust (rustup)" -}}
 {{- $installFoundry := promptBoolOnce . "installFoundry" "Install Foundry (foundryup)" -}}
 {{- $installClaudeCode := promptBoolOnce . "installClaudeCode" "Install Claude Code" -}}
@@ -8,6 +9,7 @@
 [data]
     name = {{ $name | quote }}
     email = {{ $email | quote }}
+    signingkey = {{ $signingkey | quote }}
     installRust = {{ $installRust }}
     installFoundry = {{ $installFoundry }}
     installClaudeCode = {{ $installClaudeCode }}

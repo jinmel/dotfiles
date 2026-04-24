@@ -1,6 +1,13 @@
 [user]
     name = {{ .name }}
     email = {{ .email }}
+{{- if .signingkey }}
+    signingkey = {{ .signingkey }}
+[commit]
+    gpgsign = true
+[tag]
+    gpgsign = true
+{{- end }}
 [push]
     default = upstream
 [credential]
@@ -19,3 +26,5 @@
     defaultBranch = main
 [color]
     ui = auto
+[branch]
+    autoSetupMerge = false
