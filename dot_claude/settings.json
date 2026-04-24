@@ -25,7 +25,6 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "opus[1m]",
   "hooks": {
     "Stop": [
       {
@@ -50,15 +49,18 @@
       }
     ]
   },
-  "statusLine": {
-    "type": "command",
-    "command": "ccline",
-    "padding": 0
+  "extraKnownMarketplaces": {
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    }
   },
   "enabledPlugins": {
     "context7@claude-plugins-official": true
   },
-  "effortLevel": "high",
+  "effortLevel": "xhigh",
   "skipDangerousModePermissionPrompt": true,
   "skipAutoPermissionPrompt": true
 }
