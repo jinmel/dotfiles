@@ -24,43 +24,5 @@
       "WebFetch"
     ],
     "defaultMode": "auto"
-  },
-  "hooks": {
-    "Stop": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/tmux-bell.sh"
-          }
-        ]
-      }
-    ],
-    "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/tmux-bell.sh"
-          }
-        ]
-      }
-    ]
-  },
-  "extraKnownMarketplaces": {
-    "openai-codex": {
-      "source": {
-        "source": "github",
-        "repo": "openai/codex-plugin-cc"
-      }
-    }
-  },
-  "enabledPlugins": {
-    "context7@claude-plugins-official": true
-  },
-  "effortLevel": "xhigh",
-  "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true
+  }
 }
