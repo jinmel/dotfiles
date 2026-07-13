@@ -1,3 +1,6 @@
+# Repo docs, not a dotfile
+README.md
+
 # Ignore Xresources on macOS (only needed on Linux)
 {{ if eq .chezmoi.os "darwin" }}
 .Xresources
